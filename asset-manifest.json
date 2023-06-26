@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/portage_salarial/static/css/main.de905ff7.css",
-    "main.js": "/portage_salarial/static/js/main.2d61227d.js",
+    "main.css": "/portage_salarial/static/css/main.90be52d1.css",
+    "main.js": "/portage_salarial/static/js/main.a2cc52d6.js",
     "static/js/787.c46f877b.chunk.js": "/portage_salarial/static/js/787.c46f877b.chunk.js",
     "index.html": "/portage_salarial/index.html",
-    "main.de905ff7.css.map": "/portage_salarial/static/css/main.de905ff7.css.map",
-    "main.2d61227d.js.map": "/portage_salarial/static/js/main.2d61227d.js.map",
+    "main.90be52d1.css.map": "/portage_salarial/static/css/main.90be52d1.css.map",
+    "main.a2cc52d6.js.map": "/portage_salarial/static/js/main.a2cc52d6.js.map",
     "787.c46f877b.chunk.js.map": "/portage_salarial/static/js/787.c46f877b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de905ff7.css",
-    "static/js/main.2d61227d.js"
+    "static/css/main.90be52d1.css",
+    "static/js/main.a2cc52d6.js"
   ]
 }
