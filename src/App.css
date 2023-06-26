@@ -1,6 +1,7 @@
 :root{
-  --primary : black;
+  --primary : #fefefe;
   --second : #C48E4C ;
+  --a-color : black ;
 }
 *{
   margin: 0;
@@ -16,7 +17,22 @@ body{
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  position: sticky;
 }
+.navbar.sticky {
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff; /* Couleur de fond de la barre de navigation */
+  z-index: 100;
+  
+}
+
+
+
+
 
 .navbar .logo img{
   width: 140px;
@@ -31,7 +47,7 @@ body{
 }
 .navbar .link ul li a{
   text-decoration: none;
-  color: var(--primary);
+  color: var(--a-color);
 }
 .navbar .connexion_part {
   display: flex;
@@ -52,8 +68,60 @@ body{
   padding:  8px 10px ;
   border-radius: 10px;
   margin-right: 8px;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--second);
+  background-color: var(--primary);
   cursor: pointer;
   outline: none;
 
+}
+
+/* Accueil */
+.wrap_accueil {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.wrap_accueil .wrap .image{
+  background-color: var(--second);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrap_accueil .wrap .contain h1{
+  font-size: 40px;
+}
+
+.wrap_accueil .wrap .contain , 
+.wrap_accueil .wrap .image {
+  height: 85vh;
+  width: 600px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.wrap_accueil .wrap .contain .btn_contain{
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+}
+.wrap_accueil .wrap .contain .btn_contain button{
+  padding: 8px 10px;
+  background-color: #C48E4C;
+  color: var(--primary);
+  font-size: 22px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  
+}
+.main{
+  height: 100vh;
 }
