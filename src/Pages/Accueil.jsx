@@ -27,13 +27,21 @@ const Accueil = () => {
     </div>
     </div>
     <div className='chiffre'>
-    <h1>
-      <CountUp start={0} end={17} duration={2.5} />
-      experience
-    </h1>
+    <div>
+    <h1><CountUp start={0} end={20} duration={2.5} /><sup>+</sup></h1>
+    <p>Experience</p>
+    </div>
+    <div>
+    <h1><CountUp start={0} end={2500} duration={2.5} /><sup>+</sup></h1>
+    <p>Experience</p>
+    </div>
+    <div>
+    <h1><CountUp start={0} end={4} duration={2.5} />/5</h1>
+    <p>Experience</p>
+    </div>
     </div>
     <div className="main">
-      
+
     </div>
   </>
   )
