@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/portage_salarial/static/css/main.90be52d1.css",
-    "main.js": "/portage_salarial/static/js/main.a2cc52d6.js",
+    "main.css": "/portage_salarial/static/css/main.d6b2a333.css",
+    "main.js": "/portage_salarial/static/js/main.d5fa8d2f.js",
     "static/js/787.c46f877b.chunk.js": "/portage_salarial/static/js/787.c46f877b.chunk.js",
+    "static/media/jeune-femme-bureau-travail-sourire.png": "/portage_salarial/static/media/jeune-femme-bureau-travail-sourire.5d4928a037ef9236364f.png",
     "index.html": "/portage_salarial/index.html",
-    "main.90be52d1.css.map": "/portage_salarial/static/css/main.90be52d1.css.map",
-    "main.a2cc52d6.js.map": "/portage_salarial/static/js/main.a2cc52d6.js.map",
+    "main.d6b2a333.css.map": "/portage_salarial/static/css/main.d6b2a333.css.map",
+    "main.d5fa8d2f.js.map": "/portage_salarial/static/js/main.d5fa8d2f.js.map",
     "787.c46f877b.chunk.js.map": "/portage_salarial/static/js/787.c46f877b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90be52d1.css",
-    "static/js/main.a2cc52d6.js"
+    "static/css/main.d6b2a333.css",
+    "static/js/main.d5fa8d2f.js"
   ]
 }
