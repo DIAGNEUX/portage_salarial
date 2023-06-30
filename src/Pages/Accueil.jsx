@@ -1,6 +1,9 @@
 import React from 'react'
 import "../App.css"
 import CountUp from 'react-countup';
+import autonome from '../Assets/laptop.png'
+import metier from '../Assets/work.png'
+import vrai from '../Assets/jeune-femme-bureau-travail-sourire.png'
 
 const Accueil = () => {
   return (
@@ -21,7 +24,7 @@ const Accueil = () => {
     </div>
     <div className='image'>
       <div>
-      <h1>image</h1>
+      <img src={vrai} alt="" width={"600px"} height={"450px"} />
       </div>
     </div>
     </div>
@@ -41,7 +44,44 @@ const Accueil = () => {
     </div>
     </div>
     <div className="main">
-
+      <div className='wrap_eligible'>
+        <h1 className='eligible_title'>Êtes-vous éligible à nos offres ?</h1>
+        <div className='eligible'>
+        <div className='card'>
+          <div className='icon_eligible'>
+           <h1> 18<sup>+</sup></h1>
+          </div>
+          <h2>Vous êtes majeur et résident fiscal dans la zone EMEA</h2>
+          <p>
+          Même si vous êtes ressortissant étranger, aucun souci tant que vous
+           pouvez nous justifier de votre carte de séjour valide.
+          </p>
+        </div>
+        <div className='card'>
+          <div className='card_img'>
+            <img src={metier} alt="" />
+          </div>
+          
+          <h2>Votre métier est bien couvert par le portage salarial</h2>
+          <p>
+          Consultants, formateurs, développeurs, métiers du marketing, pro.
+          de l'immobilier... notre assurance couvre une multitude de métiers.
+           Si vous avez un doute, consultez la liste.
+          </p>
+        </div>
+        <div className='card'>
+          <div className='card_img'>
+            <img src={autonome} alt="" />
+          </div>
+          <h2>Vous êtes autonome dans le métier exercé</h2>
+          <p>De la recherche & négociation de missions, à la gestion
+            quotidienne avec vos clients, vous devez être en capacité
+            d'exercer votre métier en toute autonomie. Nous serons là
+            pour vous conseiller mais n'intervenons pas directement auprès 
+            de vos clients.</p>
+        </div>
+        </div>
+      </div>
     </div>
   </>
   )
