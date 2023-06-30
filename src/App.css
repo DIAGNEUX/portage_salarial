@@ -129,20 +129,22 @@ body{
 }
 
 /* Partie eligibilité */
-.main{
-  height: 100vh;
-}
+
 .eligible{
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
+  margin: 40px 0;
 }
 .eligible .card {
-  width: 400px;
+  width: 350px;
   height: 300px;
   padding: 10px;
-  box-shadow: 10px 10px 10px gray;
+  border-radius: 50px;
+background: #e0e0e0;
+box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
 }
 .wrap_eligible{
   width: 100%;
@@ -175,3 +177,28 @@ body{
 .wrap_eligible  .card h2 {
   margin-top: 10px;
 }
+
+/* fonctionnement */
+.wrap_fonctionnement , .fonc{
+  width: 100%;
+  position: relative;
+}
+.wrap_fonctionnement h1{
+  text-align: center;
+}
+.wrap_fonctionnement  .fonc{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+.wrap_fonctionnement  .fonc .par_fonc ,
+.wrap_fonctionnement  .fonc .img_fonc{
+  width: 500px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

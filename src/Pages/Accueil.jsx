@@ -3,6 +3,7 @@ import "../App.css"
 import CountUp from 'react-countup';
 import autonome from '../Assets/laptop.png'
 import metier from '../Assets/work.png'
+import fonc from '../Assets/schema.png'
 import vrai from '../Assets/jeune-femme-bureau-travail-sourire.png'
 
 const Accueil = () => {
@@ -80,6 +81,23 @@ const Accueil = () => {
             pour vous conseiller mais n'intervenons pas directement auprès 
             de vos clients.</p>
         </div>
+        </div>
+        <div className='wrap_fonctionnement'>
+          <h1>Comment ça marche ?</h1>
+          <div className='fonc'>
+            <div className='par_fonc'>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio praesentium voluptates dolorem, repellat atque rerum veniam maiores sit repellendus ea doloribus incidunt modi nesciunt s
+                uscipit? Fuga totam voluptates laboriosam labore!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, laboriosam doloremque aliquam tempora eaque, quos, neque expedita sunt nulla tenetur optio et. Eum numquam nostrum
+                laborum, ipsam eius repellendus at.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque, atque totam sequi officia magni voluptas illo, vitae velit dolorem dolore quae eius cum 
+                mollitia ducimus ipsum, minima optio saepe.
+                </p>
+            </div>
+            <div className='img_fonc'>
+              <img src={fonc} alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
