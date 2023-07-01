@@ -5,6 +5,12 @@ import autonome from '../Assets/laptop.png'
 import metier from '../Assets/work.png'
 import fonc from '../Assets/schema.png'
 import vrai from '../Assets/jeune-femme-bureau-travail-sourire.png'
+import support from '../Assets/customer-support.png'
+import salesforce from '../Assets/salesforce.png'
+import health from '../Assets/onehandhealth.png'
+import revenue from '../Assets/revenue.png'
+import bill from '../Assets/facturation.png'
+import free from '../Assets/free.png'
 
 const Accueil = () => {
   return (
@@ -67,7 +73,7 @@ const Accueil = () => {
           <p>
           Consultants, formateurs, développeurs, métiers du marketing, pro.
           de l'immobilier... notre assurance couvre une multitude de métiers.
-           Si vous avez un doute, consultez la liste.
+          Si vous avez un doute, consultez la liste.
           </p>
         </div>
         <div className='card'>
@@ -99,6 +105,78 @@ const Accueil = () => {
             </div>
           </div>
         </div>
+
+        <div className='wrap_pourquoi'>
+          <div className='wrap_wrapper_pourquoi'>
+          <h1>Pourquoi sentechs ?</h1>
+          <div className='wrap_pourquoi_card'>
+          <div class="pourquoi_card">
+            <div>
+            <img src={salesforce} alt="" />
+            </div>
+          <p>
+          <b> Simplifiez la gestion de votre activité avec Salesforce </b> : SENTECHS utilise Salesforce, une plateforme leader dans les solutions applicatives,
+          pour simplifier la gestion quotidienne de votre activité. Après validation de votre inscription, vous aurez accès à votre espace mon.SENTECHS
+          sur ordinateur, mobile et application Salesforce. Cet espace intuitif et convivial regroupe toutes les fonctionnalités nécessaires à la gestion
+          ... <a href="">en savoir plus</a> {/* de votre activité au même endroit. Créez vos devis et factures, déclarez vos frais professionnels, choisissez vos options de paiement, téléchargez vos bulletins de salaire et justificatifs, le tout grâce à une interface simple et efficace. */}
+          </p>
+          </div>
+          <div class="pourquoi_card">
+          <div>
+          <img src={free} alt="" />
+          </div>
+          <p>
+          <b> Indépendance sans concession </b> : Avec SENTECHS, vous bénéficiez d'une grande liberté en tant qu'indépendant, sans compromis.
+          Nous n'imposons aucun minimum de chiffre d'affaires, aucun engagement contractuel et aucun frais caché. Nous croyons en 
+          la simplicité et la transparence pour vous permettre de vous concentrer sur votre activité.
+          </p>
+          </div>
+          <div class="pourquoi_card">
+            <div>
+            <img src={revenue} alt="" />
+            </div>
+          <p>
+          <b> Optimisation de vos revenus </b> : Grâce à notre expertise en portage salarial, 
+          nous vous aidons à optimiser vos revenus. Notre équipe vous accompagne dans 
+          la gestion fiscale et sociale de votre activité, afin de maximiser vos gains 
+          et de garantir une rémunération juste et équitable.
+          </p>
+          </div>
+          <div class="pourquoi_card">
+            <div>
+            <img src={support} alt="" />
+            </div>
+          <p>
+          <b> Service client de qualité </b> : Nous nous engageons à fournir un service client de premier ordre.
+          Notre équipe est disponible pour répondre à vos questions, vous guider dans les démarches administratives
+          et vous offrir un support personnalisé tout au long de votre parcours avec SENTECHS. Notre objectif est de vous
+          offrir une expérience client exceptionnelle.
+          </p>
+          </div>
+          <div class="pourquoi_card">
+            <div>
+            <img src={bill} alt="" />
+            </div>
+          <p>
+          <b> Outil de facturation intégré </b>: Pour simplifier encore davantage votre activité, nous mettons à votre
+          disposition un outil de facturation intégré. Vous pouvez facilement créer, gérer et envoyer vos
+          factures à vos clients, tout en gardant une trace de vos paiements et en respectant les obligations légales.
+          </p>
+          </div>
+          <div class="pourquoi_card">
+            <div>
+            <img src={health} alt="" />
+            </div>
+          <p>
+          <b> Couverture sociale complète </b>: En choisissant SENTECHS, vous bénéficiez d'une couverture sociale complète.
+          Nous prenons en charge les démarches administratives liées à votre protection sociale, vous offrant ainsi
+          la tranquillité d'esprit et la sécurité nécessaire pour exercer votre activité en toute confiance.
+          </p>
+          </div>
+          </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </>
