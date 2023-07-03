@@ -11,6 +11,10 @@ import health from '../Assets/onehandhealth.png'
 import revenue from '../Assets/revenue.png'
 import bill from '../Assets/facturation.png'
 import free from '../Assets/free.png'
+import calendar from '../Assets/calendar.png'
+import phone from '../Assets/phone.png'
+import email from '../Assets/email.png'
+import chatbot from '../Assets/chatbot.png'
 
 const Accueil = () => {
   return (
@@ -36,18 +40,36 @@ const Accueil = () => {
     </div>
     </div>
     </div>
+
+    <div className='contact'>
+      <ul>
+        <li><img src={phone} alt="" /></li>
+        <li><img src={email} alt="" /></li>
+        <li><img src={calendar} alt="" /></li>
+      </ul>
+
+    </div>
+
+    <div className='chatbot'>
+      <img src={chatbot} alt="" />
+    </div>
+
     <div className='chiffre'>
     <div>
     <h1><CountUp start={0} end={20} duration={2.5} /><sup>+</sup></h1>
     <p>Experience</p>
     </div>
     <div>
+    <h1><CountUp start={0} end={10} duration={2.5} /><sup>+</sup></h1>
+    <p>pays d'activité</p>
+    </div>
+    <div>
     <h1><CountUp start={0} end={2500} duration={2.5} /><sup>+</sup></h1>
-    <p>Experience</p>
+    <p>Independants accompagnés</p>
     </div>
     <div>
     <h1><CountUp start={0} end={4} duration={2.5} />/5</h1>
-    <p>Experience</p>
+    <p>Satisfaction client</p>
     </div>
     </div>
     <div className="main">

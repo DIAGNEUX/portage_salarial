@@ -25,7 +25,7 @@ body{
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff; /* Couleur de fond de la barre de navigation */
+  background-color: #fff; 
   z-index: 100;
   
 }
@@ -81,6 +81,7 @@ body{
   align-items: center;
   justify-content: center;
   width: 100%;
+  padding: 0 27px;
 }
 .wrap{
   display: flex;
@@ -122,11 +123,51 @@ body{
   cursor: pointer;
   
 }
+.contact{
+  position: fixed;
+  top: 40%;
+  left: 0px;
+  width: 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+}
+.contact ul li img{
+  width:  45px;
+  height: 45px;
+  padding: 5px;
+  border-radius: 5px;
+
+}
+/* chatbot */
+
+.chatbot{
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+}
+.chatbot img{
+  width: 45px;
+  height: 45px;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+/* chiffre */
 .chiffre{
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+.chiffre div{
+  text-align: center;
+}
+
 
 /* Partie eligibilité */
 
@@ -216,10 +257,13 @@ box-shadow:  20px 20px 60px #bebebe,
   gap: 20px;
   
 }
+.wrap_pourquoi .wrap_wrapper_pourquoi h1{
+  text-align: center;
+  margin: 25px;
+}
 .wrap_pourquoi .pourquoi_card{
   position: relative;
   padding: 10px;
-  border: 1px solid;
   border-radius: 10px;
   background: #e0e0e0;
   box-shadow: 10px 10px 30px #bebebe,
