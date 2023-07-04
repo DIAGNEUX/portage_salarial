@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/portage_salarial/static/css/main.f9cdf608.css",
+    "main.css": "/portage_salarial/static/css/main.ef2849d0.css",
     "main.js": "/portage_salarial/static/js/main.9d68c57d.js",
     "static/js/787.c46f877b.chunk.js": "/portage_salarial/static/js/787.c46f877b.chunk.js",
     "static/media/jeune-femme-bureau-travail-sourire.png": "/portage_salarial/static/media/jeune-femme-bureau-travail-sourire.5d4928a037ef9236364f.png",
     "static/media/schema.png": "/portage_salarial/static/media/schema.ae1b24dc3e8dbb39b634.png",
     "index.html": "/portage_salarial/index.html",
-    "main.f9cdf608.css.map": "/portage_salarial/static/css/main.f9cdf608.css.map",
+    "main.ef2849d0.css.map": "/portage_salarial/static/css/main.ef2849d0.css.map",
     "main.9d68c57d.js.map": "/portage_salarial/static/js/main.9d68c57d.js.map",
     "787.c46f877b.chunk.js.map": "/portage_salarial/static/js/787.c46f877b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9cdf608.css",
+    "static/css/main.ef2849d0.css",
     "static/js/main.9d68c57d.js"
   ]
 }
