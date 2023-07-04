@@ -397,6 +397,11 @@ box-shadow:  20px 20px 60px #bebebe,
 .temoignages  .tem_cards .tem_card .name_tem{
   margin-top: 40px;
 }
+.temoignages  .rate_client{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .temoignages  .rate_client ul{
   display: flex;
   list-style: none;
@@ -407,4 +412,67 @@ box-shadow:  20px 20px 60px #bebebe,
 .temoignages  .rate_client ul li img{
   width: 25px ;
   height: 25px;
+}
+/* question */
+.wrap_questions{
+  padding: 0 30px;
+  margin-top: 40px;
+}
+.wrap_questions h1{
+  text-align: center;
+}
+.wrap_questions .questions{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrap_questions .questions .img_question ,
+.wrap_questions .questions .par_question
+{
+  width: 550px;
+  height: 450px;
+  position: relative;
+
+
+}
+.wrap_questions .questions .img_question img{
+  width: 100%;
+  height: 100%;
+}
+.wrap_questions  .par_question .question{
+  padding: 30px;
+  border: 1px solid var(--second);
+  margin: 10px 0;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.wrap_questions  .par_question .question div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrap_questions  .par_question .question img{
+  width: 30px;
+  height: 30px;
+}
+
+/* contact */
+
+.wrap_contact{
+  width: 100%;
+  height: 450px;
+
+}
+.wrap_contact .contact_us{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.wrap_contact .contact_us .par_contact ,
+.wrap_contact .contact_us .from_contact{
+  width: 550px;
+  height: 450px;
+}
+.wrap_contact .contact_us .par_contact {
+  background-color: #C48E4C;
 }

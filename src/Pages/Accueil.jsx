@@ -19,6 +19,9 @@ import { useInView } from 'react-intersection-observer';
 import rate from '../Assets/rate.png'
 import no_rate from '../Assets/no-rate.png'
 import half_rate from '../Assets/half_rate.png'
+import question from '../Assets/question.jpg'
+import up from '../Assets/chevron_up.png'
+import down from '../Assets/chevron_down.png'
 
 const Accueil = () => {
   
@@ -323,6 +326,44 @@ const Accueil = () => {
           </div>
         </div>
 
+        <div className='wrap_questions'>
+          <h1>Questions fréquentes</h1>
+          <div className='questions'>
+          <div className='img_question'>
+            <img src={question} alt="" />
+          </div>
+          <div className='par_question'>
+            <div className='question'>
+              <div><p>Combien gagne-t-on en portage salarial ?</p><img src={down} alt="" /></div>
+            </div>
+            <div className='question'>
+              <div><p>Qu'est-ce-que le portage salarial ?</p><img src={down} alt="" /></div>
+            </div >
+            <div className='question'>
+              <div><p>Qui peut faire du portage salarial ?</p><img src={down} alt="" /></div>
+            </div>
+            <div className='question'>
+              <div><p>Pourquoi choisir le portage salarial pour devenir indépendant ?</p><img src={down} alt="" /></div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+        {/* contact */}
+        <div className='wrap_contact'>
+          <h1>Contact nous</h1>
+          <div className="contact_us">
+          <div className='par_contact'>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere rerum iusto cumque? Iusto nisi optio dolores? Excepturi id labore aperiam sunt harum? Quia explicabo incidunt pariatur minima quod beatae hic.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repellat minima non excepturi voluptatem magnam cum. Odit, vitae ad! Excepturi consequuntur quidem ratione, ullam molestias commodi itaque incidunt non laborum!            </p>
+
+          </div>
+          <div className='from_contact'>
+
+          </div>
+          </div>
+        </div>
 
       </div>
     </div>
