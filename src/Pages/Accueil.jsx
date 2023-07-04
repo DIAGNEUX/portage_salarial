@@ -15,8 +15,13 @@ import calendar from '../Assets/calendar.png'
 import phone from '../Assets/phone.png'
 import email from '../Assets/email.png'
 import chatbot from '../Assets/chatbot.png'
+import { useInView } from 'react-intersection-observer';
+import rate from '../Assets/rate.png'
+import no_rate from '../Assets/no-rate.png'
+import half_rate from '../Assets/half_rate.png'
 
 const Accueil = () => {
+  
   return (
     <>
     <div className='wrap_accueil'>
@@ -198,6 +203,126 @@ const Accueil = () => {
           </div>
           </div>
         </div>
+        <div className='metiers'>
+          <div className='par_metiers'>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa neque fuga quisquam nisi, possimus quidem dolores enim provident sapiente accusantium inventore tenetur recusandae, rerum minus consectetur hic, deserunt adipisci laborum?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum provident tempore cumque nostrum quibusdam odit esse adipisci assumenda, odio, doloremque alias aliquid minima modi sapiente magni commodi laboriosam accusamus saepe.
+            </p>
+          </div>
+
+          <div className='temp_metiers'>
+            <div className='grid_metiers'>
+            <div className='card_metiers'>
+              <h2>Consultant communication</h2>
+              <div>
+                <button className='branche'>Marketing </button>
+              </div>
+            </div>
+
+            <div className='card_metiers'>
+              <h2>Assistant Administrative</h2>
+              <div>
+                <button className='branche'>Administratifs RH </button>
+              </div>
+            </div>
+            
+
+            <div className='card_metiers'>
+              <h2>mandataire immobilier</h2>
+              <div>
+                <button className='branche' >Immobilier </button>
+              </div>
+            </div>
+
+            <div className='card_metiers' >
+              <h2>informaticien freelance</h2>
+              <div>
+                <button className='branche' >Developpeurs IT </button>
+              </div>
+            </div>
+
+          </div>
+          <button className='autre_metiers' >Decouvrez tous les metiers</button>
+          </div>     
+        </div>
+
+        {/* temoignages */}
+        <div className='temoignages'>
+          <h1>Que penses nos freelancers</h1>
+          <div className="wrap_temcards">
+          <div className='tem_cards'>
+            <div className='tem_card'>
+              <div className="img_temcard"></div>
+              <p className='name_tem'>john Doe</p>
+              <q>
+                people dont really know you , they don't really know you
+              </q>
+              <div className='rate_client'>
+              <ul>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={no_rate} alt="" /></li>
+              </ul>
+
+            </div>
+            </div>
+            <div className='tem_card'>
+            <div className="img_temcard"></div>
+            <p className='name_tem'>john Doe</p>
+            <q>
+              people dont really know you , they don't really know you
+            </q>
+            <div className='rate_client'>
+              <ul>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={no_rate} alt="" /></li>
+              </ul>
+
+            </div>
+            </div>
+            <div className='tem_card'>
+            <div className="img_temcard"></div>
+            <p className='name_tem'>john Doe</p>
+            <q>
+              people dont really know you , they don't really know you
+            </q>
+            <div className='rate_client'>
+              <ul>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={no_rate} alt="" /></li>
+              </ul>
+
+            </div>
+            </div>
+            <div className='tem_card'>
+            <div className="img_temcard"></div>
+            <p className='name_tem'>john Doe</p>
+            <q>
+              people dont really know you , they don't really know you
+            </q>
+            <div className='rate_client'>
+              <ul>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={rate} alt="" /></li>
+                <li><img src={no_rate} alt="" /></li>
+                <li><img src={no_rate} alt="" /></li>
+              </ul>
+
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+
 
       </div>
     </div>

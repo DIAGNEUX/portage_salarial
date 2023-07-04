@@ -26,13 +26,9 @@ body{
   left: 0;
   right: 0;
   background-color: #fff; 
-  z-index: 100;
+  z-index: 1000;
   
 }
-
-
-
-
 
 .navbar .logo img{
   width: 140px;
@@ -81,7 +77,7 @@ body{
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 0 27px;
+  padding: 0 10px;
 }
 .wrap{
   display: flex;
@@ -125,7 +121,7 @@ body{
 }
 .contact{
   position: fixed;
-  top: 40%;
+  bottom: 5px;
   left: 0px;
   width: 45px;
   background: rgba(255, 255, 255, 0.2);
@@ -163,6 +159,10 @@ body{
   display: flex;
   align-items: center;
   justify-content: space-around;
+  background-color: #C48E4C;
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--primary);
 }
 .chiffre div{
   text-align: center;
@@ -281,4 +281,130 @@ box-shadow:  20px 20px 60px #bebebe,
   width: 60px;
   height: 60px;
   
+}
+
+/* metiers */
+
+.metiers{
+  background-color: #C48E4C;
+  margin: 40px 30px;
+  height: 500px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.metiers .par_metiers, .metiers .temp_metiers{
+  width: 550px;
+  position: relative;
+  height:500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.metiers .temp_metiers .grid_metiers{
+  display: grid;
+  grid-template-columns: repeat(2 , 250px);
+  gap: 20px;
+  height: 450px;
+  margin-top: -30px;
+  
+}
+.metiers .temp_metiers .card_metiers{
+  height: 200px;
+  background-color: var(--primary);
+  border-radius: 20px;
+  border: 1px solid salmon;
+  padding: 10px;
+  position: relative;
+}
+.metiers .temp_metiers .card_metiers h2{
+  text-align: center;
+}
+.metiers .temp_metiers .autre_metiers{
+  background-color: var(--primary);
+  padding: 8px 10px;
+  border: 1px solid #C48E4C;
+  border-radius: 10px;
+  font-size: 18px;
+  width:250px;
+  position: absolute;
+  right: 10px;
+  bottom:5px;
+  cursor: pointer;
+
+}
+.metiers .temp_metiers .card_metiers .branche{
+  padding: 10px;
+  background-color: var(--primary);
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid var(--second);
+  cursor: pointer;
+
+}
+.metiers .temp_metiers .card_metiers .branche:hover{
+  background-color: var(--second);
+}
+
+/* temoignages */
+
+.temoignages{
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+.temoignages h1{
+  text-align: center;
+}
+.temoignages .wrap_temcards{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.temoignages .wrap_temcards .tem_cards{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 90%;
+
+}
+.temoignages .wrap_temcards .tem_cards .tem_card{
+  width: 250px;
+  height: 250px;
+  border: 1px solid var(--second);
+  position: relative;
+  text-align: center;
+}
+.temoignages  .tem_cards .tem_card .img_temcard{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position:absolute ;
+  top: -30px;
+  left: calc(50% - 30px);
+  border: 1px solid var(--second);
+  background-color: var(--primary);
+  
+}
+.temoignages  .tem_cards .tem_card .name_tem{
+  margin-top: 40px;
+}
+.temoignages  .rate_client ul{
+  display: flex;
+  list-style: none;
+}
+.temoignages  .rate_client ul li{
+  margin: 0 3px;
+}
+.temoignages  .rate_client ul li img{
+  width: 25px ;
+  height: 25px;
 }
