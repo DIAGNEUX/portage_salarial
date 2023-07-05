@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../App.css"
 import CountUp from 'react-countup';
 import autonome from '../Assets/laptop.png'
@@ -22,8 +22,41 @@ import half_rate from '../Assets/half_rate.png'
 import question from '../Assets/question.jpg'
 import up from '../Assets/chevron_up.png'
 import down from '../Assets/chevron_down.png'
+import developpeur from '../Assets/developpeur web.jpg'
+import directeur from '../Assets/directeur.jpg'
+import analyst from '../Assets/analyst.jpg'
+import immobilier from '../Assets/mandataire-immobilier.jpg' 
+import rate1 from '../Assets/rate1.jpg'
+import rate2 from '../Assets/rate2.jpg'
+import rate3 from '../Assets/rate3.jpg'
+import rate4 from '../Assets/rate4.jpg'
 
 const Accueil = () => {
+  const [ Open1 , setOpen1 ] = useState(false)
+  const [ Open2 , setOpen2 ] = useState(false)
+  const [ Open3 , setOpen3 ] = useState(false)
+  const [ Open4 , setOpen4 ] = useState(false)
+
+  const toggle1 = () => {
+    setOpen1(!Open1)
+  } 
+  const toggle2 = () => {
+    setOpen2(!Open2)
+  } 
+  const toggle3 = () => {
+    setOpen3(!Open3)
+  } 
+  const toggle4 = () => {
+    setOpen4(!Open4)
+
+  } 
+
+const [selectoption , Setselectoption] = useState('')
+const handleoptionchange = (event) => {
+  Setselectoption(event.target.value) 
+ 
+}
+  
   
   return (
     <>
@@ -119,16 +152,20 @@ const Accueil = () => {
         </div>
         </div>
         <div className='wrap_fonctionnement'>
-          <h1>Comment ça marche ?</h1>
+          <h1>Comment fonctionne le portage salarial ?</h1>
           <div className='fonc'>
             <div className='par_fonc'>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio praesentium voluptates dolorem, repellat atque rerum veniam maiores sit repellendus ea doloribus incidunt modi nesciunt s
-                uscipit? Fuga totam voluptates laboriosam labore!
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, laboriosam doloremque aliquam tempora eaque, quos, neque expedita sunt nulla tenetur optio et. Eum numquam nostrum
-                laborum, ipsam eius repellendus at.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat neque, atque totam sequi officia magni voluptas illo, vitae velit dolorem dolore quae eius cum 
-                mollitia ducimus ipsum, minima optio saepe.
-                </p>
+              <p>
+              Le portage salarial est une forme d'emploi qui permet à des professionnels indépendants d'exercer leur activité en bénéficiant des avantages du salariat <br />
+              Le portage salarial s’articule en trois relations ou contrats distincts :
+              <ul>
+                <li>Entre <b> l’entreprise de portage salarial </b> et <b> le salarié porté </b> : Ils sont liés par un contrat de travail à durée déterminée ou indéterminée au choix. Le consultant est considéré comme salarié porté de SENTECHS.</li>
+                <li>Entre <b> l’entreprise de portage salarial </b> et <b> l’entreprise cliente </b> : Elles sont liées par un contrat de prestation. Celui-ci définit les conditions de réalisation de la prestation de services et le tarif.</li>
+                <li> Entre <b> le salarié porté </b> et <b> l’entreprise cliente </b> : Il effectue les missions chez l’entreprise cliente comme convenu dans le contrat de prestation.</li>
+              </ul>
+              
+                Les entreprises de portage salarial gèrent toute la gestion administrative liée aux missions de son consultant en portage salarial en échange d’une commission. Le consultant porté cotise au régime général et peut bénéficier des avantages et de la protection qu’offre le salariat.
+              </p>
             </div>
             <div className='img_fonc'>
               <img src={fonc} alt="" />
@@ -208,41 +245,49 @@ const Accueil = () => {
         </div>
         <div className='metiers'>
           <div className='par_metiers'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa neque fuga quisquam nisi, possimus quidem dolores enim provident sapiente accusantium inventore tenetur recusandae, rerum minus consectetur hic, deserunt adipisci laborum?
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum provident tempore cumque nostrum quibusdam odit esse adipisci assumenda, odio, doloremque alias aliquid minima modi sapiente magni commodi laboriosam accusamus saepe.
+            <div>
+            <h1>Les metiers du portage salarial</h1>
+            <p>
+            Le portage salarial s’adresse aux professionnels bénéficiant d’une
+            expertise, c’est pourquoi on retrouve beaucoup de formateurs ou de consultants en portage. Pour 
+            généraliser, on peut dire que le portage salarial concerne les professions de prestations
+            intellectuelles. Ces professions peuvent concerner de nombreux domaines très divers
+            allant de l’informatique à l’immobilier.
             </p>
+            </div>
           </div>
 
           <div className='temp_metiers'>
             <div className='grid_metiers'>
+            <div className='card_metiers' >
+              <img src={developpeur} alt="" />
+              <div className='wrap_branche'>
+                <button className='branche' >Developpeur web </button>
+              </div>
+            </div>
             <div className='card_metiers'>
-              <h2>Consultant communication</h2>
-              <div>
-                <button className='branche'>Marketing </button>
+              <img src={analyst} alt="" />
+              <div className='wrap_branche' >
+                <button className='branche'>Data analyst </button>
               </div>
             </div>
 
             <div className='card_metiers'>
-              <h2>Assistant Administrative</h2>
-              <div>
-                <button className='branche'>Administratifs RH </button>
+              <img src={directeur} alt="" />
+              <div className='wrap_branche' >
+                <button className='branche'>Directeur de projet</button>
               </div>
             </div>
             
 
             <div className='card_metiers'>
-              <h2>mandataire immobilier</h2>
-              <div>
+              <img src={immobilier} alt="" />
+              <div className='wrap_branche' >
                 <button className='branche' >Immobilier </button>
               </div>
             </div>
 
-            <div className='card_metiers' >
-              <h2>informaticien freelance</h2>
-              <div>
-                <button className='branche' >Developpeurs IT </button>
-              </div>
-            </div>
+            
 
           </div>
           <button className='autre_metiers' >Decouvrez tous les metiers</button>
@@ -255,10 +300,14 @@ const Accueil = () => {
           <div className="wrap_temcards">
           <div className='tem_cards'>
             <div className='tem_card'>
-              <div className="img_temcard"></div>
+              <div className="img_temcard">
+                <img src={rate1} alt="" />
+              </div>
               <p className='name_tem'>john Doe</p>
               <q>
-                people dont really know you , they don't really know you
+              Sentech a simplifié ma vie de freelance. Leur expertise 
+              en portage salarial m'a libéré des tâches administratives 
+              et m'a permis de me consacrer pleinement à la création de sites web
               </q>
               <div className='rate_client'>
               <ul>
@@ -272,10 +321,14 @@ const Accueil = () => {
             </div>
             </div>
             <div className='tem_card'>
-            <div className="img_temcard"></div>
+            <div className="img_temcard">
+              <img src={rate2} alt="" />  
+            </div>
             <p className='name_tem'>john Doe</p>
             <q>
-              people dont really know you , they don't really know you
+            Grâce à Sentech, j'ai trouvé des missions passionnantes sans me soucier
+            des formalités administratives. Leur équipe dédiée a pris en charge tout
+            le côté administratif, me permettant de me concentrer sur ma créativité
             </q>
             <div className='rate_client'>
               <ul>
@@ -289,10 +342,15 @@ const Accueil = () => {
             </div>
             </div>
             <div className='tem_card'>
-            <div className="img_temcard"></div>
+            <div className="img_temcard">
+              <img src={rate3} alt="" />
+            </div>
             <p className='name_tem'>john Doe</p>
             <q>
-              people dont really know you , they don't really know you
+            Sentech a propulsé ma carrière de freelance en consulting.
+            Leur expertise et leur réseau m'ont ouvert de nouvelles
+            opportunités professionnelles, tandis qu'ils s'occupaient de
+            tous les aspects administratifs pour moi
             </q>
             <div className='rate_client'>
               <ul>
@@ -306,10 +364,14 @@ const Accueil = () => {
             </div>
             </div>
             <div className='tem_card'>
-            <div className="img_temcard"></div>
+            <div className="img_temcard">
+              <img src={rate4} alt="" />
+            </div>
             <p className='name_tem'>john Doe</p>
             <q>
-              people dont really know you , they don't really know you
+            Sentech m'a offert une tranquillité d'esprit totale.
+            Leur équipe s'est occupée de toute la gestion administrative,*
+            me permettant de me concentrer sur mes missions de marketing digital avec confiance.
             </q>
             <div className='rate_client'>
               <ul>
@@ -334,24 +396,59 @@ const Accueil = () => {
           </div>
           <div className='par_question'>
             <div className='question'>
-              <div><p>Combien gagne-t-on en portage salarial ?</p><img src={down} alt="" /></div>
+              <div>
+              <p >Combien gagne-t-on en portage salarial ?</p>
+              <img src={ Open1 ? up :down } alt="" onClick={toggle1} />
+              </div>
+              {Open1 && (
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed 
+                error aliquam saepe sit qui? Eum explicabo dignissimos expedita 
+                accusamus labore, nesciunt cum dolores voluptatibus, commodi</p>
+              )}
+              
             </div>
             <div className='question'>
-              <div><p>Qu'est-ce-que le portage salarial ?</p><img src={down} alt="" /></div>
+              <div>
+                <p>Qu'est-ce-que le portage salarial ?</p>
+                <img src={ Open2 ? up :down } alt="" onClick={toggle2} />
+                </div>
+                {Open2 && (
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed 
+                error aliquam saepe sit qui? Eum explicabo dignissimos expedita 
+                accusamus labore, nesciunt cum dolores voluptatibus, commodi</p>
+              )}
             </div >
             <div className='question'>
-              <div><p>Qui peut faire du portage salarial ?</p><img src={down} alt="" /></div>
+                <div>
+                <p>Qui peut faire du portage salarial ?</p>
+                <img src={ Open3 ? up :down } alt="" onClick={toggle3} />
+                </div>
+                {Open3 && (
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed 
+                error aliquam saepe sit qui? Eum explicabo dignissimos expedita 
+                accusamus labore, nesciunt cum dolores voluptatibus, commodi</p>
+              )}
+                
+                
             </div>
             <div className='question'>
-              <div><p>Pourquoi choisir le portage salarial pour devenir indépendant ?</p><img src={down} alt="" /></div>
+              <div>
+                <p>Pourquoi choisir le portage salarial pour devenir indépendant ?</p>
+                <img src={ Open4 ? up :down } alt="" onClick={toggle4} />
+              </div>
+              {Open4 && (
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed 
+                error aliquam saepe sit qui? Eum explicabo dignissimos expedita 
+                accusamus labore, nesciunt cum dolores voluptatibus, commodi</p>
+              )}
             </div>
           </div>
         </div>
         </div>
 
         {/* contact */}
+        <div className="wrapper_contact">
         <div className='wrap_contact'>
-          <h1>Contact nous</h1>
           <div className="contact_us">
           <div className='par_contact'>
             <p>
@@ -359,8 +456,54 @@ const Accueil = () => {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repellat minima non excepturi voluptatem magnam cum. Odit, vitae ad! Excepturi consequuntur quidem ratione, ullam molestias commodi itaque incidunt non laborum!            </p>
 
           </div>
-          <div className='from_contact'>
+          <div className='form_contact'>
+            <div className='be_wrapcont'>
+              <form action="">
+                <div className='nom_prenom'>
+                  <div>
+                  <label htmlFor="">Prenom </label>
+                  <input type="text" />
+                  </div>
+                  <div>
+                  <label htmlFor="">Nom</label>
+                  <input type="text" />
+                  </div>
+                </div>
+                <div className='email_num'>
+                  <div>
+                  <label htmlFor="">Email</label>
+                  <input type="text" />
+                  </div>
+                  <div>
+                  <label htmlFor="">Numero de tel</label>
+                  <input type="text" />
+                  </div>
+                </div>
+                <div className='motif'>
+                  <label htmlFor="">Objet</label>
+                  <ul>
+                    <div>
+                    <li><input type='radio' id='radio1' name='motif' value='Portage Salarial' checked={Setselectoption === 'Portage Salarial'} onChange={handleoptionchange} /> Portage salarial </li>
+                    <li><input type='radio' id='radio2' name='motif' value='Prix' checked={Setselectoption === 'Prix'} onChange={handleoptionchange} /> Prix </li>       
+                    </div>
+                    <div>
+                    <li><input type='radio' id='radio3' name='motif' value='Rendez vous' checked={Setselectoption === 'Rendez vous'} onChange={handleoptionchange} />Rendez vous</li>
+                    <li><input type='radio' id='radio4' name='motif' value='Autre' checked={Setselectoption === 'Autre'} onChange={handleoptionchange} />Autre</li>
+                    </div>
+                  </ul>
+                </div>
+                <div className='areatext'>
+                  <label htmlFor="">Message</label>
+                  <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div className='btn_form'>
+                  <button>Soumettre</button>
+                </div>
 
+              </form>
+            </div>
+
+          </div>
           </div>
           </div>
         </div>

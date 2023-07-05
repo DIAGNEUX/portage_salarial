@@ -223,6 +223,13 @@ box-shadow:  20px 20px 60px #bebebe,
 .wrap_fonctionnement , .fonc{
   width: 100%;
   position: relative;
+  margin: 20px 0;
+}
+.wrap_fonctionnement , .fonc p{
+  text-align: justify;
+}
+.wrap_fonctionnement , .fonc ul{
+  margin-left: 20px;
 }
 .wrap_fonctionnement h1{
   text-align: center;
@@ -303,6 +310,16 @@ box-shadow:  20px 20px 60px #bebebe,
   justify-content: center;
   
 }
+.metiers .par_metiers h1{
+  color: white;
+  text-align: center;
+}
+.metiers .par_metiers p {
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  margin: 20px 0;
+}
 .metiers .temp_metiers .grid_metiers{
   display: grid;
   grid-template-columns: repeat(2 , 250px);
@@ -319,9 +336,7 @@ box-shadow:  20px 20px 60px #bebebe,
   padding: 10px;
   position: relative;
 }
-.metiers .temp_metiers .card_metiers h2{
-  text-align: center;
-}
+
 .metiers .temp_metiers .autre_metiers{
   background-color: var(--primary);
   padding: 8px 10px;
@@ -335,21 +350,31 @@ box-shadow:  20px 20px 60px #bebebe,
   cursor: pointer;
 
 }
+.metiers .temp_metiers .card_metiers img{
+  width: 100%;
+  height: 160px;
+}
+.metiers .temp_metiers .card_metiers .wrap_branche{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .metiers .temp_metiers .card_metiers .branche{
-  padding: 10px;
+  padding: 20px 10px;
   background-color: var(--primary);
-  position: absolute;
-  bottom: 30px;
-  left: 20px;
-  border-radius: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border: none;
   outline: none;
-  border: 1px solid var(--second);
   cursor: pointer;
+  text-align: center;
+  margin-top: -40px;
+  width: 100%;
+  font-size: 20px;
 
 }
-.metiers .temp_metiers .card_metiers .branche:hover{
-  background-color: var(--second);
-}
+
 
 /* temoignages */
 
@@ -381,7 +406,11 @@ box-shadow:  20px 20px 60px #bebebe,
   height: 250px;
   border: 1px solid var(--second);
   position: relative;
+  padding: 0 5px;
+}
+.temoignages .wrap_temcards .tem_cards .tem_card p{
   text-align: center;
+  font-weight: bold;
 }
 .temoignages  .tem_cards .tem_card .img_temcard{
   width: 60px;
@@ -390,12 +419,22 @@ box-shadow:  20px 20px 60px #bebebe,
   position:absolute ;
   top: -30px;
   left: calc(50% - 30px);
-  border: 1px solid var(--second);
   background-color: var(--primary);
   
 }
+.temoignages  .tem_cards .tem_card .img_temcard img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .temoignages  .tem_cards .tem_card .name_tem{
   margin-top: 40px;
+}
+.temoignages  .tem_cards .tem_card q{
+  font-size: 15px;
+  text-align: justify;
+  
 }
 .temoignages  .rate_client{
   display: flex;
@@ -407,11 +446,11 @@ box-shadow:  20px 20px 60px #bebebe,
   list-style: none;
 }
 .temoignages  .rate_client ul li{
-  margin: 0 3px;
+  margin: 3px;
 }
 .temoignages  .rate_client ul li img{
-  width: 25px ;
-  height: 25px;
+  width: 20px ;
+  height: 20px;
 }
 /* question */
 .wrap_questions{
@@ -426,13 +465,17 @@ box-shadow:  20px 20px 60px #bebebe,
   align-items: center;
   justify-content: space-around;
 }
-.wrap_questions .questions .img_question ,
-.wrap_questions .questions .par_question
+.wrap_questions .questions .img_question 
 {
   width: 550px;
   height: 450px;
   position: relative;
 
+
+}
+.wrap_questions .questions .par_question{
+  width: 550px;
+  position: relative;
 
 }
 .wrap_questions .questions .img_question img{
@@ -450,6 +493,7 @@ box-shadow:  20px 20px 60px #bebebe,
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-weight: bold;
 }
 .wrap_questions  .par_question .question img{
   width: 30px;
@@ -458,21 +502,134 @@ box-shadow:  20px 20px 60px #bebebe,
 
 /* contact */
 
-.wrap_contact{
+.wrapper_contact{
   width: 100%;
-  height: 450px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  
+  
 
+}
+.wrap_contact{
+  width: 90%;
+  background-color: var(--second);
+  border-radius: 20px;
+  padding: 10px;
+  
 }
 .wrap_contact .contact_us{
   display: flex;
   align-items: center;
   justify-content: space-around;
-}
-.wrap_contact .contact_us .par_contact ,
-.wrap_contact .contact_us .from_contact{
-  width: 550px;
-  height: 450px;
+  
 }
 .wrap_contact .contact_us .par_contact {
-  background-color: #C48E4C;
+  width: 30%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.wrap_contact .contact_us .form_contact{
+  width:  70%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 20px;
+  
+  
+
+}
+
+
+
+.form_contact .nom_prenom ,
+.form_contact .email_num{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.form_contact .nom_prenom input ,
+.form_contact .email_num input{
+  margin:10px 5px;
+  width: 225px;
+  height: 35px;
+  display: block;
+}
+.form_contact label {
+  padding-left:5px;
+  font-size: 18px;
+}
+.form_contact .be_wrapcont{
+ border: 2px solid var(--second);
+ background-color: white;
+ padding: 10px;
+ border-radius: 10px;
+ height: 90%;
+
+}
+.form_contact .motif{
+  width: 100%;
+}
+.form_contact .motif ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+.form_contact .motif ul li{
+  border: 1px solid black;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  position: relative;
+  margin: 5px;
+
+}
+.form_contact .motif ul li:last-of-type{
+  background-color: var(--second);
+}
+.form_contact .motif ul li input[type=radio]{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+
+}
+
+
+
+
+
+
+.form_contact .areatext textarea{
+  width: 98%;
+  margin: 5px;
+  display: block;
+  height: 100px;
+
+}
+.form_contact .btn_form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  
+}
+.form_contact .btn_form button{
+  margin: 10px;
+  padding: 8px  10px;
+  font-size: 20px;
+  background-color: var(--second);
+  outline: none;
+  border: none;
+  color: white;
+  border-radius: 5px;
 }
