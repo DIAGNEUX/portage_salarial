@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portage_salarial/static/css/main.fec3a085.css",
-    "main.js": "/portage_salarial/static/js/main.5cc31c36.js",
+    "main.css": "/portage_salarial/static/css/main.3bb9a81f.css",
+    "main.js": "/portage_salarial/static/js/main.56321b55.js",
     "static/js/787.c46f877b.chunk.js": "/portage_salarial/static/js/787.c46f877b.chunk.js",
     "static/media/rate2.jpg": "/portage_salarial/static/media/rate2.6b73fd246a999fb8e32e.jpg",
     "static/media/jeune-femme-bureau-travail-sourire.png": "/portage_salarial/static/media/jeune-femme-bureau-travail-sourire.5d4928a037ef9236364f.png",
@@ -10,17 +10,18 @@
     "static/media/directeur.jpg": "/portage_salarial/static/media/directeur.7a06baed2495fc0359b1.jpg",
     "static/media/mandataire-immobilier.jpg": "/portage_salarial/static/media/mandataire-immobilier.ed2e8f16fe4540876881.jpg",
     "static/media/developpeur web.jpg": "/portage_salarial/static/media/developpeur web.56ab08be6249fa676ab5.jpg",
+    "static/media/melo.png": "/portage_salarial/static/media/melo.e96604627c73faae038f.png",
     "static/media/analyst.jpg": "/portage_salarial/static/media/analyst.20b1784c1014ec5ee1fc.jpg",
     "static/media/rate1.jpg": "/portage_salarial/static/media/rate1.b9d4d031285bfdb195b5.jpg",
     "static/media/rate4.jpg": "/portage_salarial/static/media/rate4.70be4cc83099d8f375f3.jpg",
     "static/media/schema.png": "/portage_salarial/static/media/schema.ae1b24dc3e8dbb39b634.png",
     "index.html": "/portage_salarial/index.html",
-    "main.fec3a085.css.map": "/portage_salarial/static/css/main.fec3a085.css.map",
-    "main.5cc31c36.js.map": "/portage_salarial/static/js/main.5cc31c36.js.map",
+    "main.3bb9a81f.css.map": "/portage_salarial/static/css/main.3bb9a81f.css.map",
+    "main.56321b55.js.map": "/portage_salarial/static/js/main.56321b55.js.map",
     "787.c46f877b.chunk.js.map": "/portage_salarial/static/js/787.c46f877b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fec3a085.css",
-    "static/js/main.5cc31c36.js"
+    "static/css/main.3bb9a81f.css",
+    "static/js/main.56321b55.js"
   ]
 }
