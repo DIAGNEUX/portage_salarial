@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import SimpleMap from '../maps';
+import GoogleMapReact from 'google-map-react';
 import "../App.css"
 import CountUp from 'react-countup';
 import autonome from '../Assets/laptop.png'
@@ -31,6 +33,8 @@ import rate2 from '../Assets/rate2.jpg'
 import rate3 from '../Assets/rate3.jpg'
 import rate4 from '../Assets/rate4.jpg'
 
+
+
 const Accueil = () => {
   const [ Open1 , setOpen1 ] = useState(false)
   const [ Open2 , setOpen2 ] = useState(false)
@@ -51,13 +55,12 @@ const Accueil = () => {
 
   } 
 
-const [selectoption , Setselectoption] = useState('')
+const [selectoption , Setselectoption] = useState(null)
 const handleoptionchange = (event) => {
-  Setselectoption(event.target.value) 
- 
-}
-  
-  
+  const {value} = event.target
+  Setselectoption(value === selectoption ? null : value);
+
+} 
   return (
     <>
     <div className='wrap_accueil'>
@@ -451,9 +454,12 @@ const handleoptionchange = (event) => {
         <div className='wrap_contact'>
           <div className="contact_us">
           <div className='par_contact'>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere rerum iusto cumque? Iusto nisi optio dolores? Excepturi id labore aperiam sunt harum? Quia explicabo incidunt pariatur minima quod beatae hic.
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis repellat minima non excepturi voluptatem magnam cum. Odit, vitae ad! Excepturi consequuntur quidem ratione, ullam molestias commodi itaque incidunt non laborum!            </p>
+            <div>
+              <h1>Contact nous</h1>
+              <div>
+                <SimpleMap />
+              </div>
+            </div>
 
           </div>
           <div className='form_contact'>
@@ -483,12 +489,16 @@ const handleoptionchange = (event) => {
                   <label htmlFor="">Objet</label>
                   <ul>
                     <div>
-                    <li><input type='radio' id='radio1' name='motif' value='Portage Salarial' checked={Setselectoption === 'Portage Salarial'} onChange={handleoptionchange} /> Portage salarial </li>
-                    <li><input type='radio' id='radio2' name='motif' value='Prix' checked={Setselectoption === 'Prix'} onChange={handleoptionchange} /> Prix </li>       
+                    <li  className={selectoption === 'portage-salarial' ? 'selected' : ''}>
+                       <input type="radio" name="object" id="" value="portage-salarial" onChange={handleoptionchange} /> Portage salarial </li>
+                    <li className={selectoption === 'prix' ? 'selected' : ''} > 
+                    <input type="radio" name="object" id="" value="prix" onChange={handleoptionchange} /> Prix </li>       
                     </div>
                     <div>
-                    <li><input type='radio' id='radio3' name='motif' value='Rendez vous' checked={Setselectoption === 'Rendez vous'} onChange={handleoptionchange} />Rendez vous</li>
-                    <li><input type='radio' id='radio4' name='motif' value='Autre' checked={Setselectoption === 'Autre'} onChange={handleoptionchange} />Autre</li>
+                    <li className={selectoption === 'rendez-vous' ? 'selected' : ''} >
+                      <input type="radio" name="object" id="" value="rendez-vous" onChange={handleoptionchange} />Rendez vous</li>
+                    <li className={selectoption === 'autre' ? 'selected' : '' }>
+                      <input type="radio" name="object" id="" value="autre" onChange={handleoptionchange} />Autre</li>
                     </div>
                   </ul>
                 </div>

@@ -509,15 +509,17 @@ box-shadow:  20px 20px 60px #bebebe,
   align-items: center;
   justify-content: center;
   margin-top: 60px;
+ 
   
   
 
 }
 .wrap_contact{
   width: 90%;
-  background-color: var(--second);
   border-radius: 20px;
   padding: 10px;
+  
+
   
 }
 .wrap_contact .contact_us{
@@ -527,21 +529,19 @@ box-shadow:  20px 20px 60px #bebebe,
   
 }
 .wrap_contact .contact_us .par_contact {
-  width: 30%;
-  height: 500px;
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
   
 }
 .wrap_contact .contact_us .form_contact{
-  width:  70%;
+  width:  50%;
   height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
-  border-radius: 20px;
+  color: black;
   
   
 
@@ -593,15 +593,16 @@ box-shadow:  20px 20px 60px #bebebe,
   margin: 5px;
 
 }
-.form_contact .motif ul li:last-of-type{
-  background-color: var(--second);
-}
+
 .form_contact .motif ul li input[type=radio]{
   width: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   position: absolute;
 
+}
+.selected{
+  background-color: var(--second);
 }
 
 
@@ -633,3 +634,14 @@ box-shadow:  20px 20px 60px #bebebe,
   color: white;
   border-radius: 5px;
 }
+.maps{
+  width: 500px;
+  height: 400px;
+}
+.mapname{
+  font-weight: bold; 
+  color:black;
+  width:200px;
+  display:inline-block;
+}
+/* key: "AIzaSyD4RaDc071sadY0BUdI0DiskKIX1T2pAaI" */
