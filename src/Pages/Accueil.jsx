@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import SimpleMap from '../maps';
 import GoogleMapReact from 'google-map-react';
 import "../App.css"
+import melo from "../Assets/melo.png"
 import CountUp from 'react-countup';
 import pin from '../Assets/pin.png'
 import autonome from '../Assets/laptop.png'
@@ -79,8 +80,13 @@ const handleoptionchange = (event) => {
       </div>
     </div>
     <div className='image'>
-      <div>
-      <img src={vrai} alt="" width={"600px"} height={"450px"} />
+      <div className='wrap_img'>
+      <img src={melo} alt=""  />
+      <div className='englobe_img' >
+        <p className='free'>freelancer</p>
+        <p className='salarié'>Salarié</p>
+        <div className='bubble'></div>
+      </div>
       </div>
     </div>
     </div>
