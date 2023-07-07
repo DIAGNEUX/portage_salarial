@@ -3,6 +3,7 @@ import SimpleMap from '../maps';
 import GoogleMapReact from 'google-map-react';
 import "../App.css"
 import CountUp from 'react-countup';
+import pin from '../Assets/pin.png'
 import autonome from '../Assets/laptop.png'
 import metier from '../Assets/work.png'
 import fonc from '../Assets/schema.png'
@@ -452,15 +453,36 @@ const handleoptionchange = (event) => {
         {/* contact */}
         <div className="wrapper_contact">
         <div className='wrap_contact'>
+          <div className='join_us'>
+            <h1>Contact nous</h1>
+            <div className='join_us_link'>
+              <ul>
+                <li>
+                  <span>
+                  <img src={pin} alt="" />
+                  <p> 1 Rue de Stockholm, 75008 Paris </p>
+                  </span>
+                </li>
+                <li>
+                  <span>
+                  <img src={phone} alt="" />
+                  <p> +33 (0)1 87 16 88 79 </p> 
+                 </span>
+                </li>
+                <li>
+                  <span>
+                  <img src={email} alt="" />
+                  <p>info@sentechs.fr</p>
+                  </span>
+                  </li>
+              </ul>
+            </div>
+          </div>
           <div className="contact_us">
           <div className='par_contact'>
-            <div>
-              <h1>Contact nous</h1>
-              <div>
-                <SimpleMap />
-              </div>
-            </div>
-
+          <div>
+            <SimpleMap />
+          </div>
           </div>
           <div className='form_contact'>
             <div className='be_wrapcont'>
@@ -516,6 +538,13 @@ const handleoptionchange = (event) => {
           </div>
           </div>
           </div>
+        </div>
+
+        <div className="wrap_footer">
+        <footer>
+          <h1>Footer</h1>
+
+        </footer>
         </div>
 
       </div>
