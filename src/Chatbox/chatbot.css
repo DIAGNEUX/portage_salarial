@@ -1,0 +1,18 @@
+:root{
+  --primary : #fefefe;
+  --second : #C48E4C ;
+  --a-color : black ;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.option_btn{
+  padding: 8px 10px;
+  margin: 0 3px;
+  background-color: #fefefe;
+  border-radius: 5px;
+  border: 1px solid var(--second);
+  outline: none;
+}

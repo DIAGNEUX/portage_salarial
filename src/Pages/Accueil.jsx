@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import SimpleMap from '../maps';
-import GoogleMapReact from 'google-map-react';
+import SimpleMap from '../maps'
+import GoogleMapReact from 'google-map-react'
 import "../App.css"
 import melo from "../Assets/melo.png"
-import CountUp from 'react-countup';
+import CountUp from 'react-countup'
 import pin from '../Assets/pin.png'
 import autonome from '../Assets/laptop.png'
 import metier from '../Assets/work.png'
@@ -19,7 +19,7 @@ import calendar from '../Assets/calendar.png'
 import phone from '../Assets/phone.png'
 import email from '../Assets/email.png'
 import chatbot from '../Assets/chatbot.png'
-import { useInView } from 'react-intersection-observer';
+import { useInView } from 'react-intersection-observer'
 import rate from '../Assets/rate.png'
 import no_rate from '../Assets/no-rate.png'
 import half_rate from '../Assets/half_rate.png'
@@ -34,14 +34,21 @@ import rate1 from '../Assets/rate1.jpg'
 import rate2 from '../Assets/rate2.jpg'
 import rate3 from '../Assets/rate3.jpg'
 import rate4 from '../Assets/rate4.jpg'
-
-
-
+import secu from '../Assets/secu.png'
+import freedom from '../Assets/freedom.png'
+import employé from '../Assets/employé.png'
+import close from '../Assets/close.png'
+import Chat from '../Chatbox/Chat'
 const Accueil = () => {
   const [ Open1 , setOpen1 ] = useState(false)
   const [ Open2 , setOpen2 ] = useState(false)
   const [ Open3 , setOpen3 ] = useState(false)
   const [ Open4 , setOpen4 ] = useState(false)
+  const [OpenChat , SetOpenchat] = useState(false)
+
+  const togglechat = () => {
+    SetOpenchat(!OpenChat)
+  }
 
   const toggle1 = () => {
     setOpen1(!Open1)
@@ -83,9 +90,23 @@ const handleoptionchange = (event) => {
       <div className='wrap_img'>
       <img src={melo} alt=""  />
       <div className='englobe_img' >
-        <p className='free'>freelancer</p>
-        <p className='salarié'>Salarié</p>
+        <p className='free'>
+          <img src={freedom} alt=""  />
+          <span>Independant</span>
+        </p>
+        <p className='salarié'>
+          <img src={employé} alt="" />
+          Salarié
+        </p>
+        <p className='securité'>
+          <img src={secu} alt="" />
+          Securité
+        </p>
         <div className='bubble'></div>
+        <div className='little_bubble1'></div>
+        <div className='little_bubble2'></div>
+        <div className='little_bubble3'></div>
+        <div className='little_bubble4'></div>
       </div>
       </div>
     </div>
@@ -102,7 +123,14 @@ const handleoptionchange = (event) => {
     </div>
 
     <div className='chatbot'>
-      <img src={chatbot} alt="" />
+      {OpenChat && (
+        <div className='wrap_chat'>
+        <Chat/>
+       </div>
+
+      )}
+     
+      <img className={OpenChat ? "close_icon"  : "chatbot_icon" } src={OpenChat ? close : chatbot } alt="" onClick={togglechat} />
     </div>
 
     <div className='chiffre'>
@@ -164,22 +192,26 @@ const handleoptionchange = (event) => {
         <div className='wrap_fonctionnement'>
           <h1>Comment fonctionne le portage salarial ?</h1>
           <div className='fonc'>
+
             <div className='par_fonc'>
+              <div>
               <p>
               Le portage salarial est une forme d'emploi qui permet à des professionnels indépendants d'exercer leur activité en bénéficiant des avantages du salariat <br />
-              Le portage salarial s’articule en trois relations ou contrats distincts :
+              Le portage salarial s’articule en trois relations ou contrats distincts : </p>
               <ul>
-                <li>Entre <b> l’entreprise de portage salarial </b> et <b> le salarié porté </b> : Ils sont liés par un contrat de travail à durée déterminée ou indéterminée au choix. Le consultant est considéré comme salarié porté de SENTECHS.</li>
-                <li>Entre <b> l’entreprise de portage salarial </b> et <b> l’entreprise cliente </b> : Elles sont liées par un contrat de prestation. Celui-ci définit les conditions de réalisation de la prestation de services et le tarif.</li>
-                <li> Entre <b> le salarié porté </b> et <b> l’entreprise cliente </b> : Il effectue les missions chez l’entreprise cliente comme convenu dans le contrat de prestation.</li>
+                <li className='Link1'>Entre <b> l’entreprise de portage salarial </b> et <b> le salarié porté </b> : Ils sont liés par un contrat de travail à durée déterminée ou indéterminée au choix. Le consultant est considéré comme salarié porté de SENTECHS.</li>
+                <li className='Link2'>Entre <b> l’entreprise de portage salarial </b> et <b> l’entreprise cliente </b> : Elles sont liées par un contrat de prestation. Celui-ci définit les conditions de réalisation de la prestation de services et le tarif.</li>
+                <li className='Link3'> Entre <b> le salarié porté </b> et <b> l’entreprise cliente </b> : Il effectue les missions chez l’entreprise cliente comme convenu dans le contrat de prestation.</li>
               </ul>
               
-                Les entreprises de portage salarial gèrent toute la gestion administrative liée aux missions de son consultant en portage salarial en échange d’une commission. Le consultant porté cotise au régime général et peut bénéficier des avantages et de la protection qu’offre le salariat.
-              </p>
+              <p>  Les entreprises de portage salarial gèrent toute la gestion administrative liée aux missions de son consultant en portage salarial en échange d’une commission. Le consultant porté cotise au régime général et peut bénéficier des avantages et de la protection qu’offre le salariat.</p>
+              </div>
             </div>
+
             <div className='img_fonc'>
               <img src={fonc} alt="" />
             </div>
+
           </div>
         </div>
 

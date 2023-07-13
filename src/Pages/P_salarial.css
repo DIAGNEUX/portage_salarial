@@ -1,0 +1,37 @@
+:root{
+    --primary : #fefefe;
+    --second : #C48E4C ;
+    --a-color : black ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrap_portage{
+    width: 100%;
+
+}
+.wrap_portage h1:first-child{
+    text-align: center;
+    padding: 20px 0;
+}
+.portage_container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: var(--primary);
+    
+}
+.portage_container .portage_par ,
+.portage_container .video_part 
+{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.portage_container .portage_par{
+    font-size: 20px;
+}

@@ -13,6 +13,7 @@
     "google-map-react": "^2.2.1",
     "material-icons": "^1.13.8",
     "react": "^18.2.0",
+    "react-chatbot-kit": "^2.1.2",
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.2",

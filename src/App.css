@@ -104,20 +104,30 @@ background-size: 10px 10px;
   
 }
 .wrap_accueil .wrap .image .englobe_img .free ,
-.wrap_accueil .wrap .image .englobe_img .salarié
+.wrap_accueil .wrap .image .englobe_img .salarié ,
+.wrap_accueil .wrap .image .englobe_img .securité
 {
   position: absolute;
-  background-color:hsl(33, 54%, 71%);
-  padding: 20px;
+  padding: 10px;
   font-weight: bold;
-  border-radius: 25% 10%;
+  border-radius: 20px;
+  border-radius: 50px;
+  background: white;
+  box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
+  display: flex;
+  align-items: center;
   
 }
 .wrap_accueil .wrap .image .englobe_img .bubble{
   width: 350px ;
   height: 350px;
   border-radius: 50%;
-  background-color: #C48E4C;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   position: absolute;
   z-index: -1;
   top: 140px;
@@ -125,13 +135,55 @@ background-size: 10px 10px;
 
 
 }
-.wrap_accueil .wrap .image .englobe_img .free{
-  top: 230px;
+.wrap_accueil .wrap .image .englobe_img .little_bubble1 ,
+.wrap_accueil .wrap .image .englobe_img .little_bubble2,
+.wrap_accueil .wrap .image .englobe_img .little_bubble3,
+.wrap_accueil .wrap .image .englobe_img .little_bubble4{
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--second);
+  z-index: -2;
+
+}
+.wrap_accueil .wrap .image .englobe_img .little_bubble1{
+  width: 80px;
+  height: 80px;
+  top: 160px;
+  right: 160px;
+
+
+}
+.wrap_accueil .wrap .image .englobe_img .little_bubble2{
+  width: 40px;
+  height: 40px;
+  top: 60px;
+ 
+}
+.wrap_accueil .wrap .image .englobe_img .little_bubble3{
+  width: 60px;
+  height: 60px;
+  bottom: 60px;
   left: 70px;
 
 }
+
+.wrap_accueil .wrap .image .englobe_img .free{
+  top: 230px;
+  left: 40px;
+
+}
+.wrap_accueil .wrap .image .englobe_img .securité{
+  bottom: 10px;
+  right: 40px;
+}
+.wrap_accueil .wrap .image .englobe_img .free img ,
+.wrap_accueil .wrap .image .englobe_img .salarié img,
+.wrap_accueil .wrap .image .englobe_img .securité img{
+  width: 30px;
+  height: 30px;
+}
 .wrap_accueil .wrap .image .englobe_img .salarié{
-  top: 180px;
+  top: 90px;
   right: 70px;
 
 }
@@ -187,16 +239,37 @@ background-size: 10px 10px;
 
 .chatbot{
   position: fixed;
-  bottom: 10px;
+  bottom: 0;
   right: 5px;
+  z-index: 2000;
+  
 }
-.chatbot img{
-  width: 45px;
-  height: 45px;
+.chatbot_icon{
+  width: 40px;
+  height: 40px;
   z-index: 1000;
   cursor: pointer;
 }
+.close_icon{
+  text-align: end;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  float: right;
+}
+.react-chatbot-kit-chat-inner-container{
+  height: 300px;
+}
+.react-chatbot-kit-chat-container{
+  width: 500px;
+  height: 300px;
+  
+}
 
+
+.wrap_chat p{
+  text-align: center;
+}
 
 /* chiffre */
 .chiffre{
@@ -222,6 +295,7 @@ background-size: 10px 10px;
   justify-content: space-around;
   width: 100%;
   margin: 40px 0;
+  
 }
 .eligible .card {
   width: 350px;
@@ -265,10 +339,17 @@ box-shadow:  20px 20px 60px #bebebe,
 }
 
 /* fonctionnement */
+.wrap_fonctionnement{
+  margin-top: 20px 0;
+}
 .wrap_fonctionnement , .fonc{
-  width: 100%;
+  
   position: relative;
-  margin: 20px 0;
+  background-color: var(--second);
+  color: white;
+  padding: 20px 0;
+  border-radius: 30px;
+  
 }
 .wrap_fonctionnement , .fonc p{
   text-align: justify;
@@ -375,11 +456,10 @@ box-shadow:  20px 20px 60px #bebebe,
 }
 .metiers .temp_metiers .card_metiers{
   height: 200px;
-  background-color: var(--primary);
   border-radius: 20px;
-  border: 1px solid salmon;
   padding: 10px;
   position: relative;
+  background-color: white;
 }
 
 .metiers .temp_metiers .autre_metiers{
