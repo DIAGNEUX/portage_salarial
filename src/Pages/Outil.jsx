@@ -2,7 +2,9 @@ import React from 'react'
 
 const Outil = () => {
   return (
-    <div>O</div>
+    <div>
+      
+    </div>
   )
 }
 

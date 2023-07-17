@@ -8,13 +8,15 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .wrap_portage{
     width: 100%;
+    background-color: var(--primary);
+    
 
 }
 .wrap_portage h1:first-child{
     text-align: center;
-    padding: 20px 0;
 }
 .portage_container{
     display: flex;
@@ -34,4 +36,121 @@
 }
 .portage_container .portage_par{
     font-size: 20px;
+}
+
+/* tabs */
+
+.bloc-tabs{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    text-align: justify;
+    font-size: 18px;
+
+}
+
+.bloc-tabs .tabs{
+    cursor: pointer;
+    width: calc(100% / 3);
+    text-align: center;
+    padding: 8px 12px ;
+    margin: 0 3px;
+    background-color: gainsboro;
+   
+}
+.active_tab {
+    padding: 8px 12px  ;
+    background-color: #C48E4C;
+    border-bottom: 2px solid var(--second);
+    width: calc(100% / 3);
+    margin: 0 3px;
+    text-align: center;
+
+}
+
+/* contrat tabs */
+
+.contrats{
+    cursor: pointer;
+    width: calc(100% / 2);
+    text-align: center;
+}
+
+.active_contrat{
+    padding: 8px 12px;
+    background-color: #C48E4C;
+    width: calc(100% / 2);
+    text-align: center;
+    
+
+}
+/* contrat tabs */
+
+.active_content ,
+.active_cont_contrat{
+   display: block;
+}
+.contents ,
+.cont_contrats{
+    display: none;  
+
+}
+.content ,
+.cont_contrat {
+    padding: 20px;
+}
+
+/* tabs */
+
+.wrap_part_intervenants{
+    padding: 0 100px;
+}
+.part_intervenants{
+    margin: 20px 0;
+    border-top: none;
+    border: 2px solid gainsboro; 
+}
+
+
+
+.def_portage{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.def_portage div{
+    margin: 0 10px;
+    font-size: 18px;
+    height: 400px;
+}
+.def_portage div p{
+    margin-top: 20px;
+}
+.def_portage div ul li{
+    margin-left: 40px;
+}
+
+/* contrat */
+.wrap_type_contrat{
+    border: 2px solid gainsboro;
+    margin-top: 20px;
+}
+.les_type_contrats{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 18px;
+
+}
+.contrat{
+    border: 2px solid gainsboro;
+    cursor: pointer;
+}
+
+
+/* remuneration */
+.wrap_remuneration{
+    margin-top: 20px;
+    border: 1px solid black;
 }
