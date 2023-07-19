@@ -11,9 +11,26 @@ const P_salarial = () => {
     SettoggleState1(index)
   }
   return (
+    <>
+    {/* sommaire */}
+    <div className='wrap_sommaire'>
+        <div className='sommaire'>
+          <h3>Sommaire</h3>
+          <ul>
+            <li>Definition</li>
+            <li>Fonctionnement</li>
+            <li>Contrat</li>
+            <li>Objectif</li>
+            <li>International</li>
+            <li>Rémuneration</li>
+          </ul>
+
+        </div>
+      </div>
     <div className=' wrap_portage' >
+      
       {/* c'est quoi */}
-      <h1>Qu'est-ce que le portage salarial ? </h1>
+      <h2>Definition du portage salarial </h2>
       <div className='portage_container'>
       <div className='portage_par'>
       <div>
@@ -25,7 +42,7 @@ const P_salarial = () => {
       portage salarial et l'entreprise cliente.
       </p>
       <div className='btn_portage'>
-        <button>Commencer a deposer</button>
+        <button>Déposez votre demande</button>
       </div>
       </div>
 
@@ -40,13 +57,12 @@ const P_salarial = () => {
       {/* c'est quoi */}
 
       {/* def portage */}
-      
+      <h2>Comment marche le portage salarial ? </h2>
       <div className='def_portage'>
         <div>
           <img src={schema} alt="" />
         </div>
         <div>
-        <h2>Les intervenants du portage salarial</h2>
         <p>Le portage salarial est une forme de relation de travail qui lie à la fois le
            salariat et l'entrepreneuriat. Il s'agit d'une relation
            contractuelle entre trois intervenants : 
@@ -122,13 +138,13 @@ const P_salarial = () => {
 
         <div className={ toggleState1 === 1 ? "cont_contrat active_cont_contrat" : "cont_contrats" }>
         <p>Le contrat de travail signé avec le salarié porté peut
-           être à durée déterminée ou indéterminée.
+           être à durée déterminé <b>(CDD)</b> ou indéterminée <b>(CDI)</b>.
         </p>
-        <p>Si le contrat de travail est à durée déterminée, il est conclu pour la durée de réalisation de la prestation sans pouvoir excéder 18 mois. La fin du contrat peut être reportée pour une durée maximale de 3 mois en cas d’accord entre les parties. L’ensemble des règles relatives au CDD classique s’applique (période
+        <p>Si <b> le contrat de travail est à durée déterminée </b>, il est conclu pour la durée de réalisation de la prestation sans pouvoir excéder 18 mois. La fin du contrat peut être reportée pour une durée maximale de 3 mois en cas d’accord entre les parties. L’ensemble des règles relatives au CDD classique s’applique (période
            d'essai, conditions de rupture, indemnités de fin de contrat, etc.).
         </p>
         <p>
-        Si le contrat de travail est à durée indéterminée, il est conclu pour la réalisation d’une prestation auprès d’une ou plusieurs entreprises. Les périodes pendant lesquelles aucune prestation n’est réalisée auprès 
+        Si <b> le contrat de travail est à durée indéterminée </b>, il est conclu pour la réalisation d’une prestation auprès d’une ou plusieurs entreprises. Les périodes pendant lesquelles aucune prestation n’est réalisée auprès 
         d’une entreprise cliente ne sont pas rémunérées. L’ensemble des règles relatives aux CDI classiques s’applique.
         </p>
         <p>
@@ -156,6 +172,32 @@ const P_salarial = () => {
         </div>
         </div>
 
+        <div className='wrap_objectif'>
+          <div className='objectif'>
+            <h2>L'objectif du portage salarial </h2>
+            <p>Le portage salarial est né pour répondre à différents besoins et objectifs à destination du professionnel et de l’entreprise cliente.
+            Pour le professionnel cela permet d’évoluer dans un cadre administratif légal et rassurant, mais surtout d’avoir la possibilité de jouir
+            de tous les avantages liés au statut de salarié notamment au niveau de la protection sociale et des droits au chômage.
+            Pour l’entreprise cliente, faire appel au portage salarial permet de ne pas passer par l’embauche d’un
+            salarié tout en ayant la capacité de pouvoir acquérir avec plus de facilité des consultants qualifiés, ces derniers
+            n’ayant plus la nécessité de créer leur entreprise et donc de gérer toute la partie administrative qui en découle.
+            </p>
+          </div>
+
+        </div>
+
+        <div className="wrap_international">
+          <div className='international'>
+            <h2>Peut-on faire du portage salarial à l’international ?</h2>
+            <p>
+            Le portage salarial à l’international est possible dans le cas où le salarié porté veut répondre à des missions proposées à l'international tout en bénéficiant des caractéristiques du portage salarial.
+            L’accord tripartite est de ce fait conservé. Toutefois; il est qualifié de deux manières différentes selon la durée de la mission :
+            S’il s’agit d’une mission temporaire d’une durée inférieure ou égale à 24 mois, le salarié porté est dit salarié porté détaché. Il bénéficiera tout de même de la sécurité sociale française si un accord bilatéral est mis en place entre la France et le pays ou la mission est effectué.
+            Si cela concerne une mission à durée indéterminée d’au moins 6 mois, l'indépendant aura le statut de salarié expatrié et dépendra alors du régime social appliqué dans le pays où il exerce son activité professionnelle.
+            </p>
+          </div>
+        </div>
+
         <div className='wrap_remuneration'>
           <div className='remuneration'>
           <h2>Portage salarial : rémunération</h2>
@@ -168,6 +210,7 @@ const P_salarial = () => {
         </div>
       </div>
     </div>
+    </>
 
   )
 }
