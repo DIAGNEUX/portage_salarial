@@ -1,15 +1,20 @@
 import React, { useState } from 'react'
 import "./P_salarial.css"
 import schema from '../Assets/schema.png'
+import { Link, Element } from 'react-scroll';
+
 const P_salarial = () => {
   const [toggleState , SettoggleState] = useState(1)
   const toggletab = (index) => {
     SettoggleState(index)
+    
   }
   const [toggleState1 , SettoggleState1] = useState(1)
   const toggletab1 = (index) => {
     SettoggleState1(index)
   }
+  
+
   return (
     <>
     {/* sommaire */}
@@ -17,25 +22,25 @@ const P_salarial = () => {
         <div className='sommaire'>
           <h3>Sommaire</h3>
           <ul>
-            <li>Definition</li>
-            <li>Fonctionnement</li>
-            <li>Contrat</li>
-            <li>Objectif</li>
-            <li>International</li>
-            <li>Rémuneration</li>
+            <li><Link to="definition" smooth={true} duration={1000}>Definition</Link></li>
+            <li><Link to="fonctionnement" smooth={true} duration={1000}>Fonctionnement</Link></li>
+            <li><Link to="contrat" smooth={true} duration={1000}>Contrat</Link></li>
+            <li><Link to="objectif" smooth={true} duration={1000}>Objectif</Link></li>
+            <li><Link to="international" smooth={true} duration={1000}>International</Link></li>
+            <li><Link to="remuneration" smooth={true} duration={1000}>Remuneration</Link></li>
           </ul>
 
         </div>
       </div>
     <div className=' wrap_portage' >
-      
+    <Element name="definition" className="element">
       {/* c'est quoi */}
       <h2>Definition du portage salarial </h2>
       <div className='portage_container'>
       <div className='portage_par'>
       <div>
       <p>
-      Le portage salarial est une relation contractuelle tripartite dans laquelle un salarié porté d'une entreprise
+      Le <b>portage salarial</b>  est une relation contractuelle tripartite dans laquelle un salarié porté d'une entreprise
       de portage salarial effectue une prestation pour le compte d'entreprises
       clientes. D'une part, un contrat de travail est établi entre le salarié porté
       et l'entreprise de portage salarial. D'autre part, un contrat commercial est établi entre l'entreprise de
@@ -54,10 +59,12 @@ const P_salarial = () => {
       frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
       </div>
       </div>
+      </Element>
       {/* c'est quoi */}
 
       {/* def portage */}
-      <h2>Comment marche le portage salarial ? </h2>
+      <Element name="fonctionnement" className="element">
+      <h2 >Comment marche le portage salarial ? </h2>
       <div className='def_portage'>
         <div>
           <img src={schema} alt="" />
@@ -68,22 +75,23 @@ const P_salarial = () => {
            contractuelle entre trois intervenants : 
         </p>
         <ul>
-          <li>une entreprise de portage salarial</li>
-          <li>le salarié porté,</li>
-          <li>une entreprise cliente</li>
+          <li><b> une entreprise de portage salarial </b></li>
+          <li> <b> le salarié porté, </b></li>
+          <li> <b> une entreprise cliente </b> </li>
         </ul>
         <p>Le salarié porté signe un contrat de travail avec l'entreprise de portage et réalise une prestation pour le compte d’une entreprise cliente qui a signé un contrat commercial
            avec l'entreprise de portage salarial.
         </p>
-        </div>
-        
+        </div>       
       </div>
+      </Element>
+      
       {/* def portage */}
       <div className='wrap_part_intervenants'>
       <div className='part_intervenants'>
       <div className='bloc-tabs'>
         <div 
-        className={ toggleState === 1 ? "tab active_tab" : "tabs" } onClick={() => toggletab(1)}> Le salarié de porté</div>
+        className={ toggleState === 1 ? "tab active_tab" : "tabs" } onClick={() => toggletab(1)}>  Le salarié de porté</div>
         <div 
         className={ toggleState === 2 ? "tab active_tab" : "tabs" } onClick={() => toggletab(2)}> societe de portage </div>
         <div 
@@ -125,8 +133,9 @@ const P_salarial = () => {
       </div>
       </div>
       
-
-      <div className='wrap_contrat'>
+      
+      <Element name="contrat" className="element">
+      <div className='wrap_contrat' >
         <div className='Contrat'>
         <h2>Les différents contrats de portage salarial</h2>
         <p>petite explication</p>
@@ -171,12 +180,16 @@ const P_salarial = () => {
         </div>
         </div>
         </div>
+        </Element>
 
-        <div className='wrap_objectif'>
+        <Element name="objectif" className="element">
+        <div className='wrap_objectif' >
           <div className='objectif'>
             <h2>L'objectif du portage salarial </h2>
-            <p>Le portage salarial est né pour répondre à différents besoins et objectifs à destination du professionnel et de l’entreprise cliente.
-            Pour le professionnel cela permet d’évoluer dans un cadre administratif légal et rassurant, mais surtout d’avoir la possibilité de jouir
+            <p>Le portage salarial est né pour répondre à différents besoins
+               et objectifs à destination du professionnel et de l’entreprise 
+               cliente.
+            Pour le professionnel cela permet <b> d’évoluer dans un cadre administratif légal et rassurant </b>, mais surtout d’avoir la possibilité de jouir
             de tous les avantages liés au statut de salarié notamment au niveau de la protection sociale et des droits au chômage.
             Pour l’entreprise cliente, faire appel au portage salarial permet de ne pas passer par l’embauche d’un
             salarié tout en ayant la capacité de pouvoir acquérir avec plus de facilité des consultants qualifiés, ces derniers
@@ -185,7 +198,9 @@ const P_salarial = () => {
           </div>
 
         </div>
+        </Element>
 
+        <Element name="international" className="element">
         <div className="wrap_international">
           <div className='international'>
             <h2>Peut-on faire du portage salarial à l’international ?</h2>
@@ -197,8 +212,9 @@ const P_salarial = () => {
             </p>
           </div>
         </div>
-
-        <div className='wrap_remuneration'>
+        </Element>
+        <Element name="remuneration" className="element">
+        <div className='wrap_remuneration' >
           <div className='remuneration'>
           <h2>Portage salarial : rémunération</h2>
           <p>Le salarié porté est rémunéré par la société de portage, il reçoit donc une fiche
@@ -208,6 +224,7 @@ const P_salarial = () => {
             en CDI et à l'indemnité de précarité pour les salariés en CDD.</p>
         </div>
         </div>
+        </Element>
       </div>
     </div>
     </>

@@ -8,16 +8,28 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    background-color: var(--primary);
+}
 /* sommaire */
 .wrap_sommaire{
     width: 150px;
     height: 500px;
-    border: 1px solid red;
     position: fixed;
     top: 100px;
+    background-color: #fefefe;
 }
 .wrap_sommaire .sommaire ul li{
     padding: 8px 12px;
+    border-left: 1px solid var(--second);
+    margin: 10px 0;
+    cursor: pointer;
+}
+.wrap_sommaire .sommaire ul li:hover{
+    color: var(--second);
+}
+.wrap_sommaire .sommaire ul{
+    list-style: none;
 }
 /* sommaire */
 .wrap_portage{
@@ -92,6 +104,7 @@
     padding: 8px 12px ;
     margin: 0 3px;
     background-color: gainsboro;
+    font-weight: bold;
    
 }
 .active_tab {
@@ -101,6 +114,7 @@
     width: calc(100% / 3);
     margin: 0 3px;
     text-align: center;
+    font-weight: bold;
 
 }
 
@@ -110,6 +124,7 @@
     cursor: pointer;
     width: calc(100% / 2);
     text-align: center;
+    font-weight: bold;
 }
 
 .active_contrat{
@@ -117,7 +132,7 @@
     background-color: #C48E4C;
     width: calc(100% / 2);
     text-align: center;
-    
+    font-weight: bold;
 
 }
 /* contrat tabs */
@@ -186,7 +201,6 @@
 /* objectif */
 .wrap_objectif{
     margin: 20px 0;
-    border: 1px solid black;
     padding: 20px;
 
 }
@@ -194,7 +208,6 @@
 /* international */
 .wrap_international{
     margin: 20px 0;
-    border: 1px solid black;
     padding: 20px;
 
 }
@@ -204,8 +217,8 @@
 /* remuneration */
 .wrap_remuneration{
     margin-top: 20px;
-    border: 1px solid black;
 }
 .wrap_remuneration h2{
     text-align: center;
 }
+
