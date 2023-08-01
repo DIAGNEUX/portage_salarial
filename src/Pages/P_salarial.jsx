@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./P_salarial.css"
+import "./css/P_salarial.css"
 import schema from '../Assets/schema.png'
 import { Link, Element } from 'react-scroll';
 
