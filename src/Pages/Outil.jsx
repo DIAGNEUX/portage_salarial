@@ -5,7 +5,7 @@ import Data from "../Chart/Data";
 import Chart from "chart.js/auto";
 import { CategoryScale } from "chart.js";
 import PieChart from "../Chart/PieChart";
-
+import { useEffect } from "react";
 Chart.register(CategoryScale);
 
 
@@ -13,11 +13,22 @@ const Outil = () => {
   const [pourcentage1, setPourcentage1] = useState(25);
   const [pourcentage2, setPourcentage2] = useState(70);
   const [pourcentage3, setPourcentage3] = useState(100);
-  const [Salaire_global , SetSalaire_global] = useState(0);
+  const [Salaire_global , SetSalaire_global] = useState('');
   const [Montant_quotidien , SetMontant_quotidien]= useState(500);
   const [Jours_travaillé , SetJours_travaillé]= useState(20);
   const [Nbre_de_mois , SetNbre_de_mois]= useState(12);
+  const [Salaire_par_mois , SetSalaire_par_mois] = useState('') ;
+  const [ Montant_honoraire , SetMontant_honoraire] = useState('');
+  const [Reserve , SetReserve ] = useState('');
+  const [Masse_Salariale , SetMasse_Salariale]= useState('');
+  const [Charge_patronale , SetCharge_patronale ] = useState('');
+  const [Salaire_brut , SetSalaire_brut] = useState('');
+  const [Charge_Salariale , SetCharge_Salariale] = useState('');
+  const [SalaireNet , SetSalaireNet] = useState('');
 
+
+
+  
 
   const [OpenResult , SetOpenResult] = useState( false );
 
@@ -25,9 +36,6 @@ const Outil = () => {
     const value = e.target.value;
     const max = e.target.max;
     const min = e.target.min;
-
-
-
     const inputId = e.target.id;
     const percentage = ((value - min) / (max - min)) * 100 ;
 
@@ -42,12 +50,43 @@ const Outil = () => {
       SetNbre_de_mois(Number(value));
     }
   };
+  
   const calculateSalaire = (e) => {
     e.preventDefault()
-    const Salaire_par_mois = Montant_quotidien * Jours_travaillé;
-    const Salaire_global = Salaire_par_mois * Nbre_de_mois;
-    SetSalaire_global(Salaire_global); 
 
+    const Salaire_par_mois = Math.floor(Montant_quotidien * Jours_travaillé);
+    const Salaire_global = Math.floor(Salaire_par_mois * Nbre_de_mois);
+    const Montant_honoraire = Math.floor(Montant_quotidien - (Montant_quotidien * 5 / 100))
+    const Reserve = Math.floor(Salaire_par_mois * (5 / 100));
+    const Masse_Salariale = Math.floor(Salaire_par_mois - Montant_honoraire - Reserve);
+    const Charge_patronale = Math.floor(Masse_Salariale * (35 / 100));
+    const Salaire_brut = Math.floor(Masse_Salariale - Charge_patronale);
+    const Charge_Salariale = Math.floor(Salaire_brut * (21 / 100));
+    const SalaireNet = Math.floor(Salaire_brut - Charge_Salariale);
+    
+    SetSalaire_global(Salaire_global);
+    SetSalaire_par_mois(Salaire_par_mois)
+    SetMontant_honoraire(Montant_honoraire)
+    SetReserve(Reserve)
+    SetMasse_Salariale(Masse_Salariale)
+    SetSalaire_brut(Salaire_brut)
+    SetCharge_patronale(Charge_patronale)
+    SetCharge_Salariale(Charge_Salariale)
+    SetSalaireNet(SalaireNet)
+
+    // const newEntry = {
+    //   id: Data.length+1 ,
+    //   salaire_net : SalaireNet,
+    //   charge_patronale : Charge_Salariale,
+    //   charge_salariale : Charge_Salariale ,
+    //   frais_gestion : 5 / 100 ,
+    // }
+    
+    // Data.push(newEntry)
+
+    // console.log(Data)
+    // setChartData()
+  
     SetOpenResult(!OpenResult)
 
   };
@@ -68,20 +107,6 @@ const Outil = () => {
   
   };
 
-
-  const datasets =  [
-    {
-      label: 'Popularity of colours' ,
-      data: [55, 23, 96] ,
-      backgroundColor: [
-        'rgba(255, 255, 255, 0.6)' ,
-        'rgba(255, 255, 255, 0.6)' ,
-        'rgba(255, 255, 255, 0.6)'
-      ],
-      borderWidth: 1,
-    }
-]
-
   const [chartData, setChartData] = useState({
     labels: Data.map((data) => data.year), 
     datasets: [
@@ -100,10 +125,29 @@ const Outil = () => {
       }
     ]
   });
-  
+  // const [chartData, setChartData] = useState({
+  //     labels: Data.map((data) => data.id), 
+  //     datasets: [
+  //       {
+  //         label: "morose",
+  //         data: Data.map((data) => data.salaire_net), 
+  //         backgroundColor: [
+  //           "rgba(75, 192, 192, 1)",
+  //           "#ecf0f1",
+  //           "#50AF95",
+  //           "#f3ba2f",
+  //           "#f3ba2f"
+  //         ],
+  //         borderColor: "black",
+  //         borderWidth: 2,
+  //       },
+  // ],
+  // });
 
   
   
+  
+
 
   return (
     <div className='wrap_outils'>
@@ -164,8 +208,8 @@ const Outil = () => {
             { OpenResult && (
                <div className= { OpenResult ? "result" : "not_yet" } >
                <div className="result_contain">
-               <h1>Votre revenu net optimisé</h1>
-               <h1> {Salaire_global} </h1>
+               <h1>Votre revenu avec PAS</h1>
+               <h1> {SalaireNet} </h1>
                <div className="btn_result_lance">
                <button>je me lance en portage salarial</button>
                </div>
@@ -179,16 +223,16 @@ const Outil = () => {
           <h4>Calcul votre salaire</h4>
 
           <ul>
-            <li>Chiffre d'affaire Global encaissé HT </li>
-            <li>Chiffre d'affaire mois encaissé HT</li>
-            <li>Montant honoraire</li>
+            <li><p> <b> Chiffre d'affaire Global encaissé HT </b></p> <p>{Salaire_global}</p> </li>
+            <li> <p><b> Chiffre d'affaire mois encaissé HT </b></p><p>{Salaire_par_mois}</p></li>
+            <li><p>  Montant honoraire </p> <p> {Montant_honoraire}</p></li>
             <li>Frais</li>
-            <li>Reserve</li>
-            <li>Masse Salarial</li>
-            <li>Toute les cotisations</li>
-            <li>Salaire brut / mois</li>
-            <li>Cotisation salarial</li>
-            <li>Net payer avec PAS </li>
+            <li> <p>Reserve</p> <p>{Reserve}</p></li>
+            <li> <p>Masse Salarial</p><p>{Masse_Salariale}</p> </li>
+            <li><p>Toute les cotisations </p> <p>{Charge_patronale}</p></li>
+            <li> <p>Salaire brut / mois</p> <p>{Salaire_brut}</p> </li>
+            <li> <p>Cotisation salariale</p> <p>{Charge_Salariale}</p> </li>
+            <li> <p>Net payer avec PAS</p> <p> <h1>{SalaireNet}</h1> </p> </li>
           </ul>
           </div>
 

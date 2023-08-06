@@ -125,9 +125,6 @@
     border-radius: 10px;
     padding: 10px;
     cursor: pointer;
-
-
-
 }
 .result {
     border: 1px solid black;
@@ -142,7 +139,6 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    
 }
 .result .result_contain .btn_result_lance button{
     padding: 8px 10px;
@@ -151,8 +147,6 @@
     outline: none;
     border: none;
     border-radius: 10px;
-
-
 }
 .calcul{
     width: 100%;
@@ -174,3 +168,8 @@
     padding: 20px 30px;
    
 } 
+.calcul .fiche ul li{
+    display: flex;
+    align-items:center ;
+    justify-content: space-between;
+}
