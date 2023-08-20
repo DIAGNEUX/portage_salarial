@@ -50,10 +50,10 @@ const Outil = () => {
       SetNbre_de_mois(Number(value));
     }
   };
-  
-  const calculateSalaire = (e) => {
-    e.preventDefault()
 
+  const calculateSalaire = (e) => {
+    e.preventDefault();
+  
     const Salaire_par_mois = Math.floor(Montant_quotidien * Jours_travaillé);
     const Salaire_global = Math.floor(Salaire_par_mois * Nbre_de_mois);
     const Montant_honoraire = Math.floor(Montant_quotidien - (Montant_quotidien * 5 / 100))
@@ -63,7 +63,7 @@ const Outil = () => {
     const Salaire_brut = Math.floor(Masse_Salariale - Charge_patronale);
     const Charge_Salariale = Math.floor(Salaire_brut * (21 / 100));
     const SalaireNet = Math.floor(Salaire_brut - Charge_Salariale);
-    
+  
     SetSalaire_global(Salaire_global);
     SetSalaire_par_mois(Salaire_par_mois)
     SetMontant_honoraire(Montant_honoraire)
@@ -73,23 +73,61 @@ const Outil = () => {
     SetCharge_patronale(Charge_patronale)
     SetCharge_Salariale(Charge_Salariale)
     SetSalaireNet(SalaireNet)
-
-    // const newEntry = {
-    //   id: Data.length+1 ,
-    //   salaire_net : SalaireNet,
-    //   charge_patronale : Charge_Salariale,
-    //   charge_salariale : Charge_Salariale ,
-    //   frais_gestion : 5 / 100 ,
-    // }
-    
-    // Data.push(newEntry)
-
-    // console.log(Data)
-    // setChartData()
   
-    SetOpenResult(!OpenResult)
-
+    const newEntry = {
+      id: Data.length + 1,
+      salaire_net: SalaireNet,
+      charge_patronale: Charge_Salariale,
+      charge_salariale: Charge_Salariale,
+      frais_gestion: 5 / 100,
+    };
+  
+    Data.push(newEntry);
+  
+    const newChartData = {
+      labels: ["salaire_net", "charge_patronale", "charge_salariale", "frais_gestion"],
+      datasets: [
+        {
+          label: "morose",
+          data: [SalaireNet, Charge_Salariale, Charge_Salariale, 5],
+          backgroundColor: [
+            "rgba(75, 192, 192, 1)",
+            "#ecf0f1",
+            "#50AF95",
+            "#f3ba2f",
+          ],
+          borderColor: "black",
+          borderWidth: 2,
+        },
+      ],
+    };
+  
+    setChartData(newChartData);
+  
+    console.log(Data);
+  
+    SetOpenResult(!OpenResult);
   };
+  
+  
+
+  const [chartData, setChartData] = useState({
+    labels: ["salaire_net", "charge_patronale", "charge_salariale", "frais_gestion"],
+    datasets: [
+      {
+        label: "morose",
+        data: [0, 0, 0, 0], // Initial data values, you can set them as needed
+        backgroundColor: [
+          "rgba(75, 192, 192, 1)",
+          "#ecf0f1",
+          "#50AF95",
+          "#f3ba2f",
+        ],
+        borderColor: "black",
+        borderWidth: 2,
+        },
+      ],
+      })
 
   const handleInputChange = (e) => {
     const { id, value } = e.target;
@@ -106,47 +144,6 @@ const Outil = () => {
     }
   
   };
-
-  const [chartData, setChartData] = useState({
-    labels: Data.map((data) => data.year), 
-    datasets: [
-      {
-        label: "Users Gained",
-        data: Data.map((data) => data.userGain),
-        backgroundColor: [
-          "rgba(75, 192, 192, 1)",
-          "#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "#2a71d0"
-        ],
-        borderColor: "black",
-        borderWidth: 2
-      }
-    ]
-  });
-  // const [chartData, setChartData] = useState({
-  //     labels: Data.map((data) => data.id), 
-  //     datasets: [
-  //       {
-  //         label: "morose",
-  //         data: Data.map((data) => data.salaire_net), 
-  //         backgroundColor: [
-  //           "rgba(75, 192, 192, 1)",
-  //           "#ecf0f1",
-  //           "#50AF95",
-  //           "#f3ba2f",
-  //           "#f3ba2f"
-  //         ],
-  //         borderColor: "black",
-  //         borderWidth: 2,
-  //       },
-  // ],
-  // });
-
-  
-  
-  
 
 
   return (

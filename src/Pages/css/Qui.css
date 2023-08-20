@@ -1,0 +1,37 @@
+:root{
+    --primary : #fefefe;
+    --second : #c48e4c ;
+    --a-color : black ;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--primary);
+}
+.wrap_who{
+    padding: 20px 100px;
+    background-color: var(--primary);
+}
+
+.wrap_who .jobs{
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+}
+.wrap_who .jobs .it{
+    width: 200px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    
+}
+.wrap_who .jobs .it p{
+    text-align: center;
+    font-weight: bold;
+}
+.wrap_who .jobs img{
+    width: 200px;
+    height: 200px;
+}
