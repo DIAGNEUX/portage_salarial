@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portage_salarial/static/css/main.7e3032d1.css",
-    "main.js": "/portage_salarial/static/js/main.f63da269.js",
+    "main.css": "/portage_salarial/static/css/main.461fcd15.css",
+    "main.js": "/portage_salarial/static/js/main.190cce9e.js",
     "static/js/787.c46f877b.chunk.js": "/portage_salarial/static/js/787.c46f877b.chunk.js",
     "static/media/rate2.jpg": "/portage_salarial/static/media/rate2.6b73fd246a999fb8e32e.jpg",
     "static/media/jeune-femme-bureau-travail-sourire.png": "/portage_salarial/static/media/jeune-femme-bureau-travail-sourire.5d4928a037ef9236364f.png",
@@ -11,18 +11,27 @@
     "static/media/mandataire-immobilier.jpg": "/portage_salarial/static/media/mandataire-immobilier.ed2e8f16fe4540876881.jpg",
     "static/media/developpeur web.jpg": "/portage_salarial/static/media/developpeur web.56ab08be6249fa676ab5.jpg",
     "static/media/melo.png": "/portage_salarial/static/media/melo.e96604627c73faae038f.png",
+    "static/media/chef CRM.png": "/portage_salarial/static/media/chef CRM.143e1f9760c46cecded6.png",
     "static/media/analyst.jpg": "/portage_salarial/static/media/analyst.20b1784c1014ec5ee1fc.jpg",
+    "static/media/Directeur de projet.png": "/portage_salarial/static/media/Directeur de projet.6e53585a769669066e88.png",
+    "static/media/Product Owner.png": "/portage_salarial/static/media/Product Owner.f5b16049ac9517c8041e.png",
+    "static/media/devOps.png": "/portage_salarial/static/media/devOps.c2ff4823da13a82dc6e0.png",
+    "static/media/Project Manager.png": "/portage_salarial/static/media/Project Manager.dacc16d7d36e44bef2e4.png",
     "static/media/lawyer-c.png": "/portage_salarial/static/media/lawyer-c.0daa8ba43d0a4cb2afed.png",
+    "static/media/dev backend.png": "/portage_salarial/static/media/dev backend.6b1171951cb85946f291.png",
+    "static/media/dev Front.png": "/portage_salarial/static/media/dev Front.591cb7d547e13eee675d.png",
+    "static/media/developpeur full.png": "/portage_salarial/static/media/developpeur full.87cfe578b5393114caab.png",
+    "static/media/Data-analyst.png": "/portage_salarial/static/media/Data-analyst.f5c5ac5560d80e5e5a40.png",
     "static/media/rate1.jpg": "/portage_salarial/static/media/rate1.b9d4d031285bfdb195b5.jpg",
     "static/media/rate4.jpg": "/portage_salarial/static/media/rate4.70be4cc83099d8f375f3.jpg",
     "static/media/schema.png": "/portage_salarial/static/media/schema.ae1b24dc3e8dbb39b634.png",
     "index.html": "/portage_salarial/index.html",
-    "main.7e3032d1.css.map": "/portage_salarial/static/css/main.7e3032d1.css.map",
-    "main.f63da269.js.map": "/portage_salarial/static/js/main.f63da269.js.map",
+    "main.461fcd15.css.map": "/portage_salarial/static/css/main.461fcd15.css.map",
+    "main.190cce9e.js.map": "/portage_salarial/static/js/main.190cce9e.js.map",
     "787.c46f877b.chunk.js.map": "/portage_salarial/static/js/787.c46f877b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e3032d1.css",
-    "static/js/main.f63da269.js"
+    "static/css/main.461fcd15.css",
+    "static/js/main.190cce9e.js"
   ]
 }
